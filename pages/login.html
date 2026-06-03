@@ -1,96 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="../img/logos/LOGO-removebg-preview.png"
+      rel="icon"
+      type="image/png"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../img/logos/LOGO-removebg-preview.png" type="image/png">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Panel de Administración</title>
-</head>
-
-<body style="font-family: Arial; margin: 0; background: darkblue;">
-
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="../css/general.css" rel="stylesheet" />
+  </head>
+  <body>
     <main>
-
-        <section style="background: white; width: 400px; margin: 50px auto; padding: 30px; text-align: center;
-    border-radius: 12px;">
-
-            <figure>
-                <img src="../img/logos/logo.png" alt="logo" width="70">
-            </figure>
-
-            <h1 style="color: darkblue;">
-                Panel de Administración
-            </h1>
-
-            <p>
-                Gestiona tu catálogo digital
-            </p>
-
-            <form action="admin.html" method="post">
-
-                <label for="correo">Correo electrónico:</label>
-                <br><br>
-
-                <input type="email" id="correo" name="correo"
-                    style="width: 90%; padding: 10px;" required
-                    placeholder="correo@ejemplo.com">
-
-                <br><br>
-
-                <label for="contraseña">Contraseña:</label>
-                <br><br>
-
-                <input type="password" id="contraseña" name="contraseña"
-                    style="width: 90%; padding: 10px;" required
-                    placeholder="••••••••">
-
-                <br><br>
-
-                <input type="checkbox" id="recordar" name="recordar">
-
-                <label for="recordar">
-                    Recordarme
-                </label>
-
-                <br><br>
-
-                <button type="submit"
-                    style="padding: 10px; width: 95%; background: darkblue; color: white; border: none;" title="Iniciar Sesión">
-
-                    Iniciar Sesión
-
-                </button>
-
-            </form>
-
-            <hr style="margin-top: 30px;">
-
-            <section>
-
-                <label>
-                    ¿No tienes cuenta?
-                </label>
-
-                <a href="registrarse.html" style="color: darkblue;">
-                    Regístrate aquí
-                </a>
-
-            </section>
-
+      <section>
+        <figure>
+          <img alt="logo" src="../img/logos/logo.png" width="70" />
+        </figure>
+        <h1>Panel de Administración</h1>
+        <p>Gestiona tu catálogo digital</p>
+        <form action="admin.html" method="post">
+          <label for="correo">Correo electrónico:</label>
+          <br /><br />
+          <input
+            id="correo"
+            name="correo"
+            placeholder="correo@ejemplo.com"
+            required=""
+            type="email"
+          />
+          <br /><br />
+          <label for="contraseña">Contraseña:</label>
+          <br /><br />
+          <input
+            id="contraseña"
+            name="contraseña"
+            placeholder="••••••••"
+            required=""
+            type="password"
+          />
+          <br /><br />
+          <input id="recordar" name="recordar" type="checkbox" />
+          <label for="recordar"> Recordarme </label>
+          <br /><br />
+          <button title="Iniciar Sesión" type="submit">Iniciar Sesión</button>
+        </form>
+        <hr />
+        <section>
+          <label> ¿No tienes cuenta? </label>
+          <a href="registrarse.html"> Regístrate aquí </a>
         </section>
-
-        <aside style="text-align: center;">
-
-            <a href="../index.html" style="color: darkblue;">
-                ← Volver al inicio
-            </a>
-
-        </aside>
-
+      </section>
+      <aside>
+        <a href="../index.html"> ← Volver al inicio </a>
+      </aside>
     </main>
-
-</body>
-
+  </body>
 </html>

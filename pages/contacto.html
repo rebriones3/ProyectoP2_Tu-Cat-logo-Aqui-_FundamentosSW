@@ -1,198 +1,130 @@
 <!doctype html>
+
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <link
-      rel="icon"
       href="../img/logos/LOGO-removebg-preview.png"
+      rel="icon"
       type="image/png"
     />
     <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
     />
+    <link href="../css/general.css" rel="stylesheet" />
+
     <title>Contacto</title>
   </head>
-
-  <body style="font-family: Arial; margin: 0; background: darkblue">
+  <body>
     <header>
-      <nav style="background: white; padding: 20px; text-align: center">
-        <figure style="display: inline-block; margin: 10px">
-          <img src="../img/logos/logo.png" alt="logo" width="60" />
+      <nav>
+        <figure>
+          <img alt="logo" src="../img/logos/logo.png" width="60" />
         </figure>
-        <div style="display: inline-block; margin: 10px; text-align: left">
-          <h3 style="margin: 0">Tu Catálogo Aquí</h3>
-
-          <p style="margin: 0">Tu tienda digital en un solo enlace</p>
+        <div>
+          <h3>Tu Catálogo Aquí</h3>
+          <p>Tu tienda digital en un solo enlace</p>
         </div>
-
         <i class="fa-solid fa-house"></i>
         <!-- Casa -->
-        <a href="../index.html" style="margin: 10px; color: darkblue">
-          Inicio
-        </a>
-
+        <a href="../index.html"> Inicio </a>
         <i class="fa-solid fa-cart-shopping"></i>
         <!-- Carrito -->
-        <a href="catalogo.html" style="margin: 10px; color: darkblue">
-          Catálogo
-        </a>
-
+        <a href="catalogo.html"> Catálogo </a>
         <i class="fa-solid fa-user"></i>
         <!-- Usuario -->
-        <a href="login.html" style="margin: 10px; color: darkblue"> Admin </a>
+        <a href="login.html"> Admin </a>
         <i class="fa-solid fa-phone"></i>
         <!-- Teléfono -->
-        <a href="#" style="margin: 10px; color: darkblue"> Contacto </a>
+        <a href="#"> Contacto </a>
       </nav>
     </header>
-
     <!-- MAIN -->
-    <main style="padding: 30px">
+    <main>
       <!-- PRESENTACIÓN -->
-      <section style="text-align: center; margin-bottom: 40px">
-        <h1 style="color: white">Contáctanos</h1>
-
-        <p style="color: white">
+      <section>
+        <h1>Contáctanos</h1>
+        <p>
           ¿Tienes preguntas sobre nuestros productos o servicios? Escríbenos y
           te responderemos lo antes posible.
         </p>
       </section>
-
       <!-- FORMULARIO -->
-      <section
-        style="
-          background: white;
-          width: 60%;
-          margin: auto;
-          padding: 30px;
-          border-radius: 10px;
-        "
-      >
+      <section>
         <form action="#" method="post">
           <!-- Nombre -->
           <label for="nombre"> Nombre completo </label>
-
           <br /><br />
-
           <input
-            type="text"
             id="nombre"
             name="nombre"
             placeholder="Ingrese su nombre"
-            required
-            style="width: 95%; padding: 10px"
+            required=""
+            type="text"
           />
-
           <br /><br />
-
           <!-- Correo -->
           <label for="correo"> Correo electrónico </label>
-
           <br /><br />
-
           <input
-            type="email"
             id="correo"
             name="correo"
             placeholder="correo@ejemplo.com"
-            required
-            style="width: 95%; padding: 10px"
+            required=""
+            type="email"
           />
-
           <br /><br />
-
           <!-- Telefono -->
           <label for="telefono"> Número de teléfono </label>
-
           <br /><br />
-
           <input
-            type="tel"
             id="telefono"
             name="telefono"
             placeholder="0999999999"
-            style="width: 95%; padding: 10px"
+            type="tel"
           />
-
           <br /><br />
-
           <!-- Motivo -->
           <label for="motivo"> Motivo de contacto </label>
-
           <br /><br />
-
-          <select id="motivo" name="motivo" style="width: 98%; padding: 10px">
+          <select id="motivo" name="motivo">
             <option>Información</option>
             <option>Soporte</option>
             <option>Compras</option>
             <option>Sugerencias</option>
           </select>
-
           <br /><br />
-
           <!-- Mensaje -->
           <label for="mensaje"> Mensaje </label>
-
           <br /><br />
-
           <textarea
             id="mensaje"
             name="mensaje"
-            rows="6"
             placeholder="Escriba su mensaje..."
-            style="width: 95%; padding: 10px"
+            rows="6"
           ></textarea>
-
           <br /><br />
-
           <!-- Checkbox -->
-          <input type="checkbox" id="terminos" name="terminos" required />
-
+          <input id="terminos" name="terminos" required="" type="checkbox" />
           <label for="terminos"> Acepto los términos y condiciones </label>
-
           <br /><br /><br />
-
           <!-- Botón -->
-          <button
-            type="submit"
-            style="
-              padding: 12px;
-              width: 100%;
-              background: darkblue;
-              color: white;
-              border: none;
-            "
-          >
-            Enviar mensaje
-          </button>
+          <button type="submit">Enviar mensaje</button>
         </form>
       </section>
-
       <br /><br />
-
-      <section
-        style="
-          background: white;
-          width: 60%;
-          margin: auto;
-          padding: 30px;
-          border-radius: 10px;
-        "
-      >
+      <section>
         <h3>Preguntas frecuentes</h3>
-        <details style="margin-top: 10px">
+        <details>
           <summary>
             ¿Cuánto tiempo tarda en responder el equipo de soporte?
           </summary>
-          <p style="margin-top: 20px">
-            Normalmente respondemos dentro de las 24 horas hábiles.
-          </p>
+          <p>Normalmente respondemos dentro de las 24 horas hábiles.</p>
         </details>
         <hr />
-
-        <details style="margin-top: 10px">
+        <details>
           <summary>¿Puedo solicitar una devolución?</summary>
           <p>
             Sí, ofrecemos devoluciones dentro de los 30 días posteriores a la
@@ -200,95 +132,69 @@
           </p>
         </details>
         <hr />
-
-        <details style="margin-top: 10px">
+        <details>
           <summary>¿Cómo puedo actualizar mi información de contacto?</summary>
           <p>
             Puedes actualizar tu información de contacto en tu perfil de usuario
             o contactándonos directamente.
           </p>
         </details>
-
         <hr />
       </section>
-
       <!-- INFORMACIÓN -->
-      <aside style="text-align: center; margin-top: 40px; color: white">
+      <aside>
         <h3>Información de contacto</h3>
-
         <p>Santo Domingo de los Tsáchilas - Ecuador</p>
-
         <!-- WhatsApp -->
         <p>
           <i class="fa-brands fa-whatsapp"></i>
-          <a
-            href="https://wa.me/593996494273"
-            target="_blank"
-            style="color: white; text-decoration: none"
-          >
+          <a href="https://wa.me/593996494273" target="_blank">
             WhatsApp: +593 99 649 4273
           </a>
         </p>
-
         <!-- Correo -->
         <p>
           <i class="fa-solid fa-at"></i>
-          <a
-            href="mailto:tucatalogoaqui@gmail.com"
-            style="color: white; text-decoration: none"
-          >
+          <a href="mailto:tucatalogoaqui@gmail.com">
             tucatalogoaqui@gmail.com
           </a>
         </p>
-
         <!-- Facebook -->
         <p>
           <i class="fa-brands fa-facebook"></i>
           <a
             href="https://www.facebook.com/estefany.brioness/?locale=es_LA"
             target="_blank"
-            style="color: white; text-decoration: none"
           >
             Facebook
           </a>
         </p>
-
         <!-- Instagram -->
         <p>
           <i class="fa-brands fa-instagram"></i>
-          <a
-            href="https://www.instagram.com/ruuth.estefany/"
-            target="_blank"
-            style="color: white; text-decoration: none"
-          >
+          <a href="https://www.instagram.com/ruuth.estefany/" target="_blank">
             Instagram
           </a>
         </p>
-
         <!-- Google Maps -->
         <p>
           <i class="fa-solid fa-map"></i>
           <a
-            href="https://www.google.com/maps/@-0.3735552,-78.4171008,12z?entry=ttu&g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D"
+            href="https://www.google.com/maps/@-0.3735552,-78.4171008,12z?entry=ttu&amp;g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
-            style="color: white; text-decoration: none"
           >
             Google Maps
           </a>
         </p>
       </aside>
     </main>
-
     <!-- FOOTER -->
-    <footer
-      style="background: #333; color: white; text-align: center; padding: 20px"
-    >
-      <p>&copy; 2024 Tu Catálogo Aquí. Todos los derechos reservados.</p>
-
+    <footer>
+      <p>© 2024 Tu Catálogo Aquí. Todos los derechos reservados.</p>
       <p>
         Síguenos en
-        <a href="#" style="color: white">Facebook</a>,
-        <a href="#" style="color: white">Instagram</a>
+        <a href="#">Facebook</a>,
+        <a href="#">Instagram</a>
       </p>
     </footer>
   </body>

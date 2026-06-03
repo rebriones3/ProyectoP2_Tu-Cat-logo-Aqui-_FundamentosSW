@@ -1,341 +1,225 @@
 <!doctype html>
+
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <link
-      rel="icon"
       href="../img/logos/LOGO-removebg-preview.png"
+      rel="icon"
       type="image/png"
     />
     <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
     />
+    <link href="../css/general.css" rel="stylesheet" />
 
     <title>Dashboard Básico</title>
   </head>
-
-  <body style="font-family: Arial; margin: 0">
-    <header style="background: white; padding: 20px; text-align: center">
-      <figure style="display: inline-block; margin: 10px">
-        <img src="../img//logos/logo.png" alt="logo" width="60" />
+  <body>
+    <header>
+      <figure>
+        <img alt="logo" src="../img//logos/logo.png" width="60" />
       </figure>
-
-      <div
-        style="display: inline-block; margin: 10px; text-align: left; padding;"
-      >
-        <h4 style="margin: 0">Tu Catálogo Aquí</h4>
-
-        <p style="margin: 0">Tu tienda digital en un solo enlace</p>
+      <div>
+        <h4>Tu Catálogo Aquí</h4>
+        <p>Tu tienda digital en un solo enlace</p>
       </div>
       <i class="fa-solid fa-cart-shopping"></i>
       <!-- Carrito -->
-      <a href="catalogo.html" style="color: darkblue; margin: 10px" title="Catalogo Demo">
-        Catalogo
-      </a>
+      <a href="catalogo.html" title="Catalogo Demo"> Catalogo </a>
       <i class="fa-solid fa-arrow-right-from-bracket"></i>
-      <a href="../index.html" style="color: red; margin: 10px" title="Cerrar Sesion">
-        Cerrar Sesion
-      </a>
+      <a href="../index.html" title="Cerrar Sesion"> Cerrar Sesion </a>
     </header>
-
-    <main style="padding: 30px">
+    <main>
       <!-- Estadísticas -->
-      <section
-        style="
-          padding: 50px;
-          text-align: center;
-          background: darkblue;
-          margin: 30px;
-          border-radius: 12px;
-        "
-      >
-        <h2 style="color: white">Dashboard</h2>
-
-        <p style="color: white">Resumen de tu negocio</p>
-
-        <article
-          style="
-            background: white;
-            padding: 20px;
-            width: 200px;
-            display: inline-block;
-            border-radius: 12px;
-            margin: 10px;
-          "
-        >
+      <section>
+        <h2>Dashboard</h2>
+        <p>Resumen de tu negocio</p>
+        <article>
           <h3>Productos totales</h3>
-
           <p>8 productos</p>
         </article>
-
-        <article
-          style="
-            background: white;
-            padding: 20px;
-            width: 200px;
-            display: inline-block;
-            margin: 10px;
-            border-radius: 12px;
-          "
-        >
+        <article>
           <h3>Unidades en stock</h3>
-
           <p>235 unidades</p>
         </article>
-
-        <article
-          style="
-            background: white;
-            padding: 20px;
-            width: 200px;
-            display: inline-block;
-            margin: 10px;
-            border-radius: 12px;
-          "
-        >
+        <article>
           <h3>P. destacados</h3>
-
           <p>4 productos</p>
         </article>
-
-        <article
-          style="
-            background: white;
-            padding: 20px;
-            width: 200px;
-            display: inline-block;
-            margin: 10px;
-            border-radius: 12px;
-          "
-        >
+        <article>
           <h3>Valor del inventario</h3>
-
           <p>$15028.72</p>
         </article>
       </section>
-
       <!-- Acciones -->
-      <section style="text-align: center; margin-top: 40px">
+      <section>
         <h2>Acciones rápidas</h2>
-
-        <button
-          title="Gestionar los productos"
-          style="
-            padding: 10px;
-            margin: 10px;
-            background: darkblue;
-            color: white;
-            border: none;
-          "
-        >
-          Gestionar Productos
-        </button>
-
-        <button
-          title="Configura las opciones de tu negocio"
-          style="padding: 10px; margin: 10px"
-        >
+        <button title="Gestionar los productos">Gestionar Productos</button>
+        <button title="Configura las opciones de tu negocio">
           Configurar Negocio
         </button>
-
-        <button
-          title="Ver tu catálogo público"
-          style="padding: 10px; margin: 10px"
-        >
-          Ver Mi Catálogo
-        </button>
-
-        <button
-          title="Comparte tu catálogo con otros"
-          style="padding: 10px; margin: 10px"
-        >
+        <button title="Ver tu catálogo público">Ver Mi Catálogo</button>
+        <button title="Comparte tu catálogo con otros">
           Compartir Mi Catálogo
         </button>
       </section>
-
       <!-- Productos -->
-      <section style="margin-top: 40px">
-        <h2 style="text-align: center">Productos recientes</h2>
-
-        <table
-          style="
-            width: 80%;
-            margin: 30px auto;
-            background: white;
-            border-collapse: collapse;
-            text-align: center;
-            border: 2px solid #dcdcdc;
-          "
-        >
-          <tr style="background: #f5f5f5">
-            <th style="padding: 15px; border: 1px solid #dcdcdc">Id</th>
-            <th style="padding: 15px; border: 1px solid #dcdcdc">Producto</th>
-            <th style="padding: 15px; border: 1px solid #dcdcdc">Precio</th>
-            <th style="padding: 15px; border: 1px solid #dcdcdc">Stock</th>
-            <th style="padding: 15px; border: 1px solid #dcdcdc">Imagen</th>
-            <th style="padding: 15px; border: 1px solid #dcdcdc">Calidad</th>
-          </tr>
-
+      <section>
+        <h2>Productos recientes</h2>
+        <table>
           <tr>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">1</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">
-              Vestido Elegante Floral
-            </td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">$49.99</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">20</td>
-            <td><img src="../img/productos/vestidofloral.png" alt="Vestido Floral" width="100" /></td>
-            <td style="border: 1px solid #dcdcdc;"><progress value="80" max="100" style="width: 100px;"></progress><span>80%</span></td>
+            <th>Id</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Imagen</th>
+            <th>Calidad</th>
           </tr>
-
           <tr>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">2</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">
-              Blusa Casual Blanca
+            <td>1</td>
+            <td>Vestido Elegante Floral</td>
+            <td>$49.99</td>
+            <td>20</td>
+            <td>
+              <img
+                alt="Vestido Floral"
+                src="../img/productos/vestidofloral.png"
+                width="100"
+              />
             </td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">$22.00</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">35</td>
-            <td><img src="../img/productos/blusacasual.png" alt="Blusa Blanca" width="100" /></td>
-            <td style="border: 1px solid #dcdcdc;"><progress value="60" max="100" style="width: 100px;"></progress><span>60%</span></td>
+            <td><progress max="100" value="80"></progress><span>80%</span></td>
           </tr>
-
           <tr>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">3</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">
-              Vestido Largo de Fiesta
+            <td>2</td>
+            <td>Blusa Casual Blanca</td>
+            <td>$22.00</td>
+            <td>35</td>
+            <td>
+              <img
+                alt="Blusa Blanca"
+                src="../img/productos/blusacasual.png"
+                width="100"
+              />
             </td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">$45.00</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">12</td>
-            <td><img src="../img/productos/vestidofiesta.png" alt="Vestido Largo" width="100" /></td>
-            <td style="border: 1px solid #dcdcdc;"><progress value="70" max="100" style="width: 100px;"></progress><span>70%</span></td>
+            <td><progress max="100" value="60"></progress><span>60%</span></td>
           </tr>
-
           <tr>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">4</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">
-              Blusa Oversize Moderna
+            <td>3</td>
+            <td>Vestido Largo de Fiesta</td>
+            <td>$45.00</td>
+            <td>12</td>
+            <td>
+              <img
+                alt="Vestido Largo"
+                src="../img/productos/vestidofiesta.png"
+                width="100"
+              />
             </td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">$18.00</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">28</td>
-            <td><img src=" ../img/productos/blusamoderna.png" alt="Blusa Moderna" width="100"/></td>
-            <td style="border: 1px solid #dcdcdc;"><progress value="50" max="100" style="width: 100px;"></progress><span>50%</span></td>
+            <td><progress max="100" value="70"></progress><span>70%</span></td>
           </tr>
-
           <tr>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">5</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">
-              Falda Plisada Beige
+            <td>4</td>
+            <td>Blusa Oversize Moderna</td>
+            <td>$18.00</td>
+            <td>28</td>
+            <td>
+              <img
+                alt="Blusa Moderna"
+                src=" ../img/productos/blusamoderna.png"
+                width="100"
+              />
             </td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">$25.00</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">18</td>
-            <td><img src="../img/productos/faldaplisada.png" alt="Falda Plisada" width="100" /></td>
-            <td style="border: 1px solid #dcdcdc;"><progress value="60" max="100" style="width: 100px;"></progress><span>60%</span></td>
+            <td><progress max="100" value="50"></progress><span>50%</span></td>
           </tr>
-
           <tr>
-              <td style="padding: 15px; border: 1px solid #dcdcdc">6</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">
-              Vestido Casual Primavera
+            <td>5</td>
+            <td>Falda Plisada Beige</td>
+            <td>$25.00</td>
+            <td>18</td>
+            <td>
+              <img
+                alt="Falda Plisada"
+                src="../img/productos/faldaplisada.png"
+                width="100"
+              />
             </td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">$32.49</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">25</td>
-            <td><img src="../img/productos/vestidoprimavera.png" alt="Vestido Casual" width="100" /></td>
-            <td style="border: 1px solid #dcdcdc;"><progress value="80" max="100" style="width: 100px;"></progress><span>80%</span></td>
+            <td><progress max="100" value="60"></progress><span>60%</span></td>
           </tr>
-
           <tr>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">7</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">
-              Blusa Satinada Premium
+            <td>6</td>
+            <td>Vestido Casual Primavera</td>
+            <td>$32.49</td>
+            <td>25</td>
+            <td>
+              <img
+                alt="Vestido Casual"
+                src="../img/productos/vestidoprimavera.png"
+                width="100"
+              />
             </td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">$15.00</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">15</td>
-            <td><img src="../img/productos/blusasatinada.png" alt="Blusa Satinada" width="100" /></td>
-            <td style="border: 1px solid #dcdcdc;"><progress value="90" max="100" style="width: 100px;"></progress><span>90%</span></td>
+            <td><progress max="100" value="80"></progress><span>80%</span></td>
           </tr>
-
           <tr>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">8</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">
-              Chaqueta Denim Urbana
+            <td>7</td>
+            <td>Blusa Satinada Premium</td>
+            <td>$15.00</td>
+            <td>15</td>
+            <td>
+              <img
+                alt="Blusa Satinada"
+                src="../img/productos/blusasatinada.png"
+                width="100"
+              />
             </td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">$20.00</td>
-            <td style="padding: 15px; border: 1px solid #dcdcdc">10</td>
-            <td><img src="../img/productos/chaqueta.png" alt="Chaqueta Denim" width="100" /></td>
-            <td style="border: 1px solid #dcdcdc;"><progress value="70" max="100" style="width: 100px;"></progress><span>70%</span></td>
+            <td><progress max="100" value="90"></progress><span>90%</span></td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Chaqueta Denim Urbana</td>
+            <td>$20.00</td>
+            <td>10</td>
+            <td>
+              <img
+                alt="Chaqueta Denim"
+                src="../img/productos/chaqueta.png"
+                width="100"
+              />
+            </td>
+            <td><progress max="100" value="70"></progress><span>70%</span></td>
           </tr>
         </table>
       </section>
-
-      <section
-  style="
-    padding: 30px;
-    text-align: center;
-    background: darkblue;
-    margin: 30px;
-    border-radius: 12px;
-    color: white;
-  "
->
-  <p>Porcentaje de Ventas del Mes:</p>
-
-  <div
-    style="
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    "
-  >
-    <progress
-      value="80"
-      max="100"
-      style="width: 60%; accent-color: green"
-    ></progress>
-
-    <span>80%</span>
-  </div>
-
-  <br />
-
-  <hr />
-
-  <p>Porcentaje de Ventas Fallidas:</p>
-
-  <div
-    style="
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    "
-  >
-    <meter
-      value="20"
-      min="0"
-      max="100"
-      style="width: 60%"
-      title="20% de las ventas fueron fallidas"
-    ></meter>
-
-    <span>20%</span>
-  </div>
-</section>
+      <section>
+        <p>Porcentaje de Ventas del Mes:</p>
+        <div>
+          <progress max="100" value="80"></progress>
+          <span>80%</span>
+        </div>
+        <br />
+        <hr />
+        <p>Porcentaje de Ventas Fallidas:</p>
+        <div>
+          <meter
+            max="100"
+            min="0"
+            title="20% de las ventas fueron fallidas"
+            value="20"
+          ></meter>
+          <span>20%</span>
+        </div>
+      </section>
     </main>
-
     <!-- FOOTER -->
-    <footer style="background: #333; color: white; text-align: center; padding: 20px;">
-
-        <p>
-            &copy; 2024 Tu Catálogo Aquí. Todos los derechos reservados.
-        </p>
-
-        <p>
-            Síguenos en
-            <a href="#" style="color: white;">Facebook</a>,
-            <a href="#" style="color: white;">Instagram</a>
-        </p>
+    <footer>
+      <p>© 2024 Tu Catálogo Aquí. Todos los derechos reservados.</p>
+      <p>
+        Síguenos en
+        <a href="#">Facebook</a>,
+        <a href="#">Instagram</a>
+      </p>
     </footer>
   </body>
 </html>
