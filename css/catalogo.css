@@ -1,0 +1,289 @@
+/* ============================================================
+   BLOQUE 1: HERO DEL CATÁLOGO
+   Sección de presentación superior con título y botones.
+   ============================================================ */
+
+#hero-catalogo {
+    background: linear-gradient(135deg, #3153c8 0%, #3c82f6 55%, #1ba5e8 100%);
+    padding: 70px 20px 60px;
+    text-align: center;
+    color: white;
+}
+
+#hero-catalogo h1 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+#hero-catalogo p {
+    color: white;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+#hero-catalogo button {
+    margin: 0 8px;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+
+#hero-catalogo button:first-of-type {
+    background: white;
+    color: #1d4ed8;
+}
+
+#hero-catalogo button:last-of-type {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+#hero-catalogo button:hover {
+    opacity: 0.88;
+}
+
+/* ============================================================
+   BLOQUE 2: INFORMACIÓN DE LA TIENDA
+   Dos columnas: datos del negocio y estadísticas destacadas.
+   ============================================================ */
+
+#info-tienda {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+    padding: 60px 10%;
+    background: #f7f9fc;
+}
+
+.caja-tienda {
+    flex: 1;
+    background: white;
+    border-radius: 24px;
+    padding: 36px 32px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.caja-tienda img {
+    border-radius: 50%;
+    border: 3px solid #eef3ff;
+}
+
+.caja-tienda h3 {
+    font-size: 22px;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+}
+
+.caja-tienda p {
+    color: #60708d;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.caja-tienda button {
+    margin-top: 16px;
+    padding: 12px 24px;
+    background: #25d366;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.caja-tienda button:hover {
+    background: #1ebe5d;
+}
+
+.caja-info {
+    flex: 1.4;
+    background: #2846b8;
+    border-radius: 24px;
+    padding: 36px 32px;
+    color: white;
+    text-align: left;
+}
+
+.caja-info h2 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.caja-info > p {
+    color: rgba(255, 255, 255, 0.85);
+    text-align: left;
+    margin-bottom: 28px;
+}
+
+.estadisticas-tienda {
+    display: flex;
+    gap: 16px;
+}
+
+.stat {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 20px 16px;
+    text-align: center;
+}
+
+.stat h3 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 4px;
+}
+
+.stat p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    margin: 0;
+}
+
+/* ============================================================
+   BLOQUE 3: BUSCADOR Y ENCABEZADO DE COLECCIÓN
+   Título, descripción e input de búsqueda de productos.
+   ============================================================ */
+
+#seccion-busqueda {
+    background: white;
+    padding: 50px 10%;
+    text-align: center;
+    border-bottom: 1px solid #eef1ff;
+}
+
+#seccion-busqueda h2 {
+    font-size: 32px;
+    color: #1a1a2e;
+    margin-bottom: 10px;
+}
+
+#seccion-busqueda p {
+    color: #60708d;
+    margin-bottom: 24px;
+}
+
+#buscar-productos {
+    width: 100%;
+    max-width: 480px;
+    padding: 13px 20px;
+    border: 2px solid #dde4ff;
+    border-radius: 12px;
+    font-size: 15px;
+    background: #f7f9ff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#buscar-productos:focus {
+    border-color: #3c82f6;
+    background: white;
+}
+
+/* ============================================================
+   BLOQUE 4: CUADRÍCULA DE PRODUCTOS
+   Tarjetas con imagen, nombre, precio y botón de compra.
+   ============================================================ */
+
+#grid-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 50px 10%;
+    background-color: #3153c8;
+}
+
+#grid-productos article {
+    background: white;
+    border-radius: 20px;
+    padding: 24px 20px;
+    text-align: center;
+    border: 1px solid #eef1ff;
+    margin-bottom: 0;
+}
+
+#grid-productos article img {
+    border-radius: 12px;
+    margin-bottom: 14px;
+}
+
+#grid-productos article h3 {
+    font-size: 15px;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+#grid-productos article p {
+    color: #3153c8;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+#grid-productos article button {
+    width: 100%;
+    padding: 10px;
+    background: #2846b8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#grid-productos article button:hover {
+    background: #3c82f6;
+}
+
+/* ============================================================
+   BLOQUE 5: RESPONSIVE
+   Adaptaciones para pantallas pequeñas (tablets y móviles).
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    #grid-productos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    #hero-catalogo h1 {
+        font-size: 32px;
+    }
+
+    #info-tienda {
+        flex-direction: column;
+        padding: 40px 6%;
+    }
+
+    .estadisticas-tienda {
+        flex-direction: column;
+    }
+
+    #seccion-busqueda {
+        padding: 36px 6%;
+    }
+
+    #grid-productos {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 36px 6%;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #grid-productos {
+        grid-template-columns: 1fr;
+    }
+}

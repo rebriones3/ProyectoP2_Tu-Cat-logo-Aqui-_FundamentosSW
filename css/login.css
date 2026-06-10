@@ -1,0 +1,189 @@
+/* ============================================================
+   BLOQUE 1: FONDO Y LAYOUT DE PÁGINA
+   Centra el formulario vertical y horizontalmente en la pantalla.
+   ============================================================ */
+
+body {
+    background: linear-gradient(135deg, #3153c8 0%, #3c82f6 55%, #1ba5e8 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ============================================================
+   BLOQUE 2: TARJETA DEL FORMULARIO
+   Card blanca centrada con sombra y bordes redondeados.
+   ============================================================ */
+
+.tarjeta-login {
+    background: white;
+    border-radius: 24px;
+    padding: 48px 44px;
+    width: 100%;
+    max-width: 440px;
+    margin: 40px auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    text-align: center;
+}
+
+/* ============================================================
+   BLOQUE 3: LOGO Y ENCABEZADO
+   Imagen, título y subtítulo del formulario de inicio de sesión.
+   ============================================================ */
+
+.tarjeta-login figure {
+    margin: 0 auto 20px;
+}
+
+.tarjeta-login img {
+    border-radius: 16px;
+    border: 3px solid #eef3ff;
+}
+
+.tarjeta-login h1 {
+    font-size: 26px;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+.tarjeta-login > p {
+    color: #60708d;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+/* ============================================================
+   BLOQUE 4: CAMPOS DEL FORMULARIO
+   Labels, inputs y checkbox alineados a la izquierda.
+   ============================================================ */
+
+.tarjeta-login form {
+    text-align: left;
+}
+
+.tarjeta-login label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+}
+
+.tarjeta-login input[type="email"],
+.tarjeta-login input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #dde4ff;
+    border-radius: 10px;
+    font-size: 14px;
+    background: #f7f9ff;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+}
+
+.tarjeta-login input[type="email"]:focus,
+.tarjeta-login input[type="password"]:focus {
+    border-color: #3c82f6;
+    background: white;
+    outline: none;
+}
+
+/* Fila con el checkbox "Recordarme" */
+.recordar-sesion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.recordar-sesion input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    accent-color: #2846b8;
+}
+
+.recordar-sesion label {
+    font-size: 13px;
+    color: #60708d;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* ============================================================
+   BLOQUE 5: BOTÓN DE ENVÍO
+   Botón que ocupa todo el ancho del formulario.
+   ============================================================ */
+
+.tarjeta-login button[type="submit"] {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #2846b8, #3c82f6);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.tarjeta-login button[type="submit"]:hover {
+    background: linear-gradient(135deg, #1d37a0, #2f72e8);
+}
+
+/* ============================================================
+   BLOQUE 6: ENLACES INFERIORES
+   Separador, link a registro y link de volver al inicio.
+   ============================================================ */
+
+.tarjeta-login hr {
+    margin: 24px 0 16px;
+    border-color: #eef1ff;
+}
+
+.enlace-registro {
+    font-size: 13px;
+    color: #60708d;
+    text-align: center;
+}
+
+.enlace-registro a {
+    color: #2846b8;
+    font-weight: 600;
+    margin: 0 2px;
+}
+
+.enlace-registro a:hover {
+    text-decoration: underline;
+}
+
+.volver-inicio {
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 40px;
+}
+
+.volver-inicio a {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+}
+
+.volver-inicio a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* ============================================================
+   BLOQUE 7: RESPONSIVE
+   Adaptaciones para pantallas muy pequeñas (móviles).
+   ============================================================ */
+
+@media (max-width: 480px) {
+    .tarjeta-login {
+        padding: 36px 24px;
+        margin: 20px 16px;
+        border-radius: 18px;
+    }
+}

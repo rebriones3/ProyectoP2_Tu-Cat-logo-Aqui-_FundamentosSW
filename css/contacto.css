@@ -1,0 +1,250 @@
+/* ============================================================
+   BLOQUE 1: HERO DE PRESENTACIÓN
+   Banner superior con el mismo degradado del resto del sitio.
+   ============================================================ */
+
+#hero-contacto {
+    background: linear-gradient(135deg, #3153c8 0%, #3c82f6 55%, #1ba5e8 100%);
+    padding: 70px 20px 60px;
+    text-align: center;
+    color: white;
+}
+
+#hero-contacto h1 {
+    color: white;
+    font-size: 46px;
+    margin-bottom: 14px;
+}
+
+#hero-contacto p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 17px;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   BLOQUE 2: LAYOUT DE DOS COLUMNAS
+   Formulario a la izquierda, información de contacto a la derecha.
+   ============================================================ */
+
+.contenido-contacto {
+    display: flex;
+    gap: 30px;
+    padding: 60px 10%;
+    background: #f7f9fc;
+    align-items: flex-start;
+}
+
+.columna-formulario {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ============================================================
+   BLOQUE 3: FORMULARIO DE CONTACTO
+   Card blanca con los campos y el botón de envío.
+   ============================================================ */
+
+#formulario-contacto {
+    background: white;
+    border-radius: 24px;
+    padding: 40px 36px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+#formulario-contacto h2 {
+    font-size: 22px;
+    color: #1a1a2e;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+#formulario-contacto label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a2e;
+    margin-bottom: 6px;
+    text-align: left;
+}
+
+#formulario-contacto input,
+#formulario-contacto select,
+#formulario-contacto textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #dde4ff;
+    border-radius: 10px;
+    font-size: 14px;
+    background: #f7f9ff;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+}
+
+#formulario-contacto input:focus,
+#formulario-contacto select:focus,
+#formulario-contacto textarea:focus {
+    border-color: #3c82f6;
+    background: white;
+    outline: none;
+}
+
+.terminos {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.terminos input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    accent-color: #2846b8;
+}
+
+.terminos label {
+    font-size: 13px;
+    color: #60708d;
+    margin: 0;
+    font-weight: 400;
+}
+
+#formulario-contacto button[type="submit"] {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #2846b8, #3c82f6);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#formulario-contacto button[type="submit"]:hover {
+    background: linear-gradient(135deg, #1d37a0, #2f72e8);
+}
+
+/* ============================================================
+   BLOQUE 4: PREGUNTAS FRECUENTES (FAQ)
+   Acordeones con preguntas y respuestas expandibles.
+   ============================================================ */
+
+#preguntas-frecuentes {
+    background: white;
+    border-radius: 24px;
+    padding: 40px 36px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+#preguntas-frecuentes h3 {
+    font-size: 20px;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#preguntas-frecuentes details {
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 4px;
+    background: #f7f9ff;
+}
+
+#preguntas-frecuentes details[open] {
+    background: #eef3ff;
+}
+
+#preguntas-frecuentes summary {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a2e;
+    cursor: pointer;
+    text-align: left;
+}
+
+#preguntas-frecuentes summary:hover {
+    color: #2846b8;
+}
+
+#preguntas-frecuentes details p {
+    font-size: 13px;
+    color: #60708d;
+    margin-top: 10px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+#preguntas-frecuentes hr {
+    border-color: #eef1ff;
+    margin: 4px 0;
+}
+
+/* ============================================================
+   BLOQUE 5: INFORMACIÓN DE CONTACTO (ASIDE)
+   Card azul lateral con datos de ubicación y redes sociales.
+   ============================================================ */
+
+.info-contacto {
+    flex: 1;
+    background: #2846b8;
+    border-radius: 24px;
+    padding: 36px 30px;
+    color: white;
+    box-shadow: 0 8px 25px rgba(40, 70, 184, 0.3);
+}
+
+.info-contacto h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.info-contacto p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: left;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-contacto p i {
+    font-size: 16px;
+    color: white;
+    width: 20px;
+    flex-shrink: 0;
+}
+
+.info-contacto a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    margin: 0;
+}
+
+.info-contacto a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* ============================================================
+   BLOQUE 6: RESPONSIVE
+   Adaptaciones para pantallas pequeñas (tablets y móviles).
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    #hero-contacto h1 {
+        font-size: 32px;
+    }
+
+    .contenido-contacto {
+        flex-direction: column;
+        padding: 36px 6%;
+    }
+}

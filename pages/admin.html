@@ -1,225 +1,189 @@
 <!doctype html>
-
 <html lang="es">
+
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link
-      href="../img/logos/LOGO-removebg-preview.png"
-      rel="icon"
-      type="image/png"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="../css/general.css" rel="stylesheet" />
-
-    <title>Dashboard Básico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/logos/LOGO-removebg-preview.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+    <title>Dashboard</title>
   </head>
+
   <body>
-    <header>
+
+    <!-- Encabezado del panel de administración -->
+    <header class="admin-header">
       <figure>
-        <img alt="logo" src="../img//logos/logo.png" width="60" />
+        <img src="../img/logos/logo.png" alt="logo" width="60" />
       </figure>
-      <div>
+      <div class="admin-header-info">
         <h4>Tu Catálogo Aquí</h4>
         <p>Tu tienda digital en un solo enlace</p>
       </div>
-      <i class="fa-solid fa-cart-shopping"></i>
-      <!-- Carrito -->
-      <a href="catalogo.html" title="Catalogo Demo"> Catalogo </a>
-      <i class="fa-solid fa-arrow-right-from-bracket"></i>
-      <a href="../index.html" title="Cerrar Sesion"> Cerrar Sesion </a>
+      <nav class="admin-nav">
+        <a href="catalogo.html" title="Catálogo Demo">
+          <i class="fa-solid fa-cart-shopping"></i> Catálogo
+        </a>
+        <a href="../index.html" title="Cerrar Sesión" class="btn-logout">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión
+        </a>
+      </nav>
     </header>
-    <main>
-      <!-- Estadísticas -->
-      <section>
-        <h2>Dashboard</h2>
+
+    <!-- Título del dashboard -->
+      <section id="hero-dashboard">
+        <h1>Dashboard</h1>
         <p>Resumen de tu negocio</p>
-        <article>
+      </section>
+
+    <main class="dashboard">
+
+      <!-- Tarjetas con estadísticas del negocio -->
+      <div class="stats-grid">
+        <div class="stat-card">
           <h3>Productos totales</h3>
-          <p>8 productos</p>
-        </article>
-        <article>
+          <p>8</p>
+        </div>
+        <div class="stat-card">
           <h3>Unidades en stock</h3>
-          <p>235 unidades</p>
-        </article>
-        <article>
-          <h3>P. destacados</h3>
-          <p>4 productos</p>
-        </article>
-        <article>
+          <p>235</p>
+        </div>
+        <div class="stat-card">
+          <h3>Productos destacados</h3>
+          <p>4</p>
+        </div>
+        <div class="stat-card">
           <h3>Valor del inventario</h3>
-          <p>$15028.72</p>
-        </article>
-      </section>
-      <!-- Acciones -->
-      <section>
+          <p>$15,028</p>
+        </div>
+      </div>
+
+      <!-- Botones de acciones rápidas -->
+      <section class="acciones-rapidas">
         <h2>Acciones rápidas</h2>
-        <button title="Gestionar los productos">Gestionar Productos</button>
-        <button title="Configura las opciones de tu negocio">
-          Configurar Negocio
-        </button>
-        <button title="Ver tu catálogo público">Ver Mi Catálogo</button>
-        <button title="Comparte tu catálogo con otros">
-          Compartir Mi Catálogo
-        </button>
+        <div class="acciones-botones">
+          <button title="Gestionar los productos">
+            <i class="fa-solid fa-box"></i> Gestionar Productos
+          </button>
+          <button title="Configura las opciones de tu negocio">
+            <i class="fa-solid fa-gear"></i> Configurar Negocio
+          </button>
+          <button title="Ver tu catálogo público">
+            <i class="fa-solid fa-eye"></i> Ver Mi Catálogo
+          </button>
+          <button title="Comparte tu catálogo con otros">
+            <i class="fa-solid fa-share-nodes"></i> Compartir Mi Catálogo
+          </button>
+        </div>
       </section>
-      <!-- Productos -->
-      <section>
+
+      <!-- Tabla con los productos registrados -->
+      <section class="tabla-productos">
         <h2>Productos recientes</h2>
         <table>
-          <tr>
-            <th>Id</th>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>Stock</th>
-            <th>Imagen</th>
-            <th>Calidad</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Vestido Elegante Floral</td>
-            <td>$49.99</td>
-            <td>20</td>
-            <td>
-              <img
-                alt="Vestido Floral"
-                src="../img/productos/vestidofloral.png"
-                width="100"
-              />
-            </td>
-            <td><progress max="100" value="80"></progress><span>80%</span></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Blusa Casual Blanca</td>
-            <td>$22.00</td>
-            <td>35</td>
-            <td>
-              <img
-                alt="Blusa Blanca"
-                src="../img/productos/blusacasual.png"
-                width="100"
-              />
-            </td>
-            <td><progress max="100" value="60"></progress><span>60%</span></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Vestido Largo de Fiesta</td>
-            <td>$45.00</td>
-            <td>12</td>
-            <td>
-              <img
-                alt="Vestido Largo"
-                src="../img/productos/vestidofiesta.png"
-                width="100"
-              />
-            </td>
-            <td><progress max="100" value="70"></progress><span>70%</span></td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Blusa Oversize Moderna</td>
-            <td>$18.00</td>
-            <td>28</td>
-            <td>
-              <img
-                alt="Blusa Moderna"
-                src=" ../img/productos/blusamoderna.png"
-                width="100"
-              />
-            </td>
-            <td><progress max="100" value="50"></progress><span>50%</span></td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Falda Plisada Beige</td>
-            <td>$25.00</td>
-            <td>18</td>
-            <td>
-              <img
-                alt="Falda Plisada"
-                src="../img/productos/faldaplisada.png"
-                width="100"
-              />
-            </td>
-            <td><progress max="100" value="60"></progress><span>60%</span></td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>Vestido Casual Primavera</td>
-            <td>$32.49</td>
-            <td>25</td>
-            <td>
-              <img
-                alt="Vestido Casual"
-                src="../img/productos/vestidoprimavera.png"
-                width="100"
-              />
-            </td>
-            <td><progress max="100" value="80"></progress><span>80%</span></td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>Blusa Satinada Premium</td>
-            <td>$15.00</td>
-            <td>15</td>
-            <td>
-              <img
-                alt="Blusa Satinada"
-                src="../img/productos/blusasatinada.png"
-                width="100"
-              />
-            </td>
-            <td><progress max="100" value="90"></progress><span>90%</span></td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>Chaqueta Denim Urbana</td>
-            <td>$20.00</td>
-            <td>10</td>
-            <td>
-              <img
-                alt="Chaqueta Denim"
-                src="../img/productos/chaqueta.png"
-                width="100"
-              />
-            </td>
-            <td><progress max="100" value="70"></progress><span>70%</span></td>
-          </tr>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th>Imagen</th>
+              <th>Calidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Vestido Elegante Floral</td>
+              <td>$49.99</td>
+              <td>20</td>
+              <td><img src="../img/productos/vestidofloral.png" alt="Vestido Floral" width="80" /></td>
+              <td><progress value="80" max="100"></progress><span>80%</span></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Blusa Casual Blanca</td>
+              <td>$22.00</td>
+              <td>35</td>
+              <td><img src="../img/productos/blusacasual.png" alt="Blusa Blanca" width="80" /></td>
+              <td><progress value="60" max="100"></progress><span>60%</span></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Vestido Largo de Fiesta</td>
+              <td>$45.00</td>
+              <td>12</td>
+              <td><img src="../img/productos/vestidofiesta.png" alt="Vestido Largo" width="80" /></td>
+              <td><progress value="70" max="100"></progress><span>70%</span></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Blusa Oversize Moderna</td>
+              <td>$18.00</td>
+              <td>28</td>
+              <td><img src="../img/productos/blusamoderna.png" alt="Blusa Moderna" width="80" /></td>
+              <td><progress value="50" max="100"></progress><span>50%</span></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Falda Plisada Beige</td>
+              <td>$25.00</td>
+              <td>18</td>
+              <td><img src="../img/productos/faldaplisada.png" alt="Falda Plisada" width="80" /></td>
+              <td><progress value="60" max="100"></progress><span>60%</span></td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Vestido Casual Primavera</td>
+              <td>$32.49</td>
+              <td>25</td>
+              <td><img src="../img/productos/vestidoprimavera.png" alt="Vestido Casual" width="80" /></td>
+              <td><progress value="80" max="100"></progress><span>80%</span></td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Blusa Satinada Premium</td>
+              <td>$15.00</td>
+              <td>15</td>
+              <td><img src="../img/productos/blusasatinada.png" alt="Blusa Satinada" width="80" /></td>
+              <td><progress value="90" max="100"></progress><span>90%</span></td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Chaqueta Denim Urbana</td>
+              <td>$20.00</td>
+              <td>10</td>
+              <td><img src="../img/productos/chaqueta.png" alt="Chaqueta Denim" width="80" /></td>
+              <td><progress value="70" max="100"></progress><span>70%</span></td>
+            </tr>
+          </tbody>
         </table>
       </section>
-      <section>
-        <p>Porcentaje de Ventas del Mes:</p>
-        <div>
-          <progress max="100" value="80"></progress>
+
+      <!-- Barras de métricas de ventas -->
+      <section class="metricas-ventas">
+        <p>Porcentaje de Ventas del Mes</p>
+        <div class="barra-metrica">
+          <progress value="80" max="100"></progress>
           <span>80%</span>
         </div>
-        <br />
         <hr />
-        <p>Porcentaje de Ventas Fallidas:</p>
-        <div>
-          <meter
-            max="100"
-            min="0"
-            title="20% de las ventas fueron fallidas"
-            value="20"
-          ></meter>
+        <p>Porcentaje de Ventas Fallidas</p>
+        <div class="barra-metrica">
+          <meter min="0" max="100" value="20" title="20% de las ventas fueron fallidas"></meter>
           <span>20%</span>
         </div>
       </section>
+
     </main>
-    <!-- FOOTER -->
+
+    <!-- Pie de página -->
     <footer>
       <p>© 2024 Tu Catálogo Aquí. Todos los derechos reservados.</p>
-      <p>
-        Síguenos en
-        <a href="#">Facebook</a>,
-        <a href="#">Instagram</a>
-      </p>
+      <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Instagram</a></p>
     </footer>
+
   </body>
 </html>

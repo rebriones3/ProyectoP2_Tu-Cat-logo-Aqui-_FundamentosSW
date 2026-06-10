@@ -1,73 +1,61 @@
 <!doctype html>
-
 <html lang="es">
+
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link
-      href="img/logos/LOGO-removebg-preview.png"
-      rel="icon"
-      type="image/png"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="css/general.css" rel="stylesheet" />
-    <title>Crear Cuenta</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/logos/LOGO-removebg-preview.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Tu Catálogo Aquí</title>
   </head>
+
   <body>
-    <nav>
+
+    <!-- Encabezado con logo y menú de navegación -->
+    <header>
       <figure>
-        <img alt="logo" src="img/logos/logo.png" width="40px" />
+        <img src="img/logos/logo.png" alt="logo" width="40" />
       </figure>
-      <div>
+      <div class="header-text">
         <h4>Tu Catálogo Aquí</h4>
         <p>Tu tienda digital en un solo enlace</p>
       </div>
-      <i class="fa-solid fa-house"></i>
-      <!-- Casa -->
-      <a href="#"> Inicio </a>
-      <i class="fa-solid fa-cart-shopping"></i>
-      <!-- Carrito -->
-      <a href="pages/catalogo.html"> Catalogo </a>
-      <i class="fa-solid fa-user"></i>
-      <!-- Usuario -->
-      <a href="pages/login.html"> Admin </a>
-      <i class="fa-solid fa-phone"></i>
-      <!-- Teléfono -->
-      <a href="pages/contacto.html"> Contacto </a>
-    </nav>
-    <header class="hero">
-      <article class="contenido-principal">
-        <figure>
-          <img alt="logo" src="img/logos/logo.png" width="80" />
-        </figure>
-        <h1>Tu Catálogo Aquí</h1>
-        <h2>Tu tienda digital en un solo enlace</h2>
-        <p>
-          Olvídate del desorden en redes sociales. Crea tu catálogo digital
-          profesional <br />
-          para tecnología, belleza, accesorios y más. Vende directamente por
-          WhatsApp.
-        </p>
-        <br />
-        <br />
-        <!-- Botones -->
-        <a href="pages/catalogo.html" type="submit">
+      <nav class="nav-links">
+        <a href="#"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="pages/catalogo.html"><i class="fa-solid fa-cart-shopping"></i> Catálogo</a>
+        <a href="pages/login.html"><i class="fa-solid fa-user"></i> Admin</a>
+        <a href="pages/contacto.html"><i class="fa-solid fa-phone"></i> Contacto</a>
+      </nav>
+    </header>
+
+    <!-- Sección principal con título, descripción y botones de acción -->
+    <section id="hero">
+      <figure>
+        <img src="img/logos/logo.png" alt="logo" width="80" />
+      </figure>
+      <h1>Tu Catálogo Aquí</h1>
+      <h2>Tu tienda digital en un solo enlace</h2>
+      <p>
+        Olvídate del desorden en redes sociales. Crea tu catálogo digital profesional <br />
+        para tecnología, belleza, accesorios y más. Vende directamente por WhatsApp.
+      </p>
+
+      <!-- Botones principales -->
+      <div class="cta-botones">
+        <a href="pages/catalogo.html" class="btn-principal">
           Ver Catálogo Demo
           <i class="fa-solid fa-arrow-right"></i>
-          <!-- Flecha derecha -->
         </a>
-        <a href="pages/login.html" type="submit">
+        <a href="pages/login.html" class="btn-secundario">
           <i class="fa-solid fa-box"></i>
-          <!-- Caja -->
           Haz un Catálogo
         </a>
-        <br />
-        <br />
-      </article>
-      <section class="estadisticas">
+      </div>
+
+      <!-- Tarjetas con estadísticas destacadas -->
+      <div class="cards-estadisticas">
         <article class="card">
           <h2>100+</h2>
           <p>Productos disponibles</p>
@@ -78,99 +66,101 @@
         </article>
         <article class="card">
           <h2>5.0</h2>
-          <p>
-            <i class="fa-solid fa-star"></i>
-            <!-- Estrella -->
-            Calificación
-          </p>
+          <p><i class="fa-solid fa-star"></i> Calificación</p>
         </article>
-      </section>
-    </header>
+      </div>
+    </section>
+
     <main>
-      <!-- BENEFICIOS -->
-      <section class="beneficios">
-        <header class="beneficios-header">
-          <p>Innovación que transforma</p>
+
+      <!-- Sección de beneficios del servicio -->
+      <section id="beneficios">
+        <div class="beneficios-header">
+          <span>Innovación que transforma</span>
           <h2>Más que un catálogo</h2>
-          <p>
-            Una experiencia completa que revoluciona la forma de vender online.
-          </p>
-          <p>
-            <b>Sin complicaciones. Solo resultados.</b>
-          </p>
-        </header>
-        <section>
-          <!-- Card principal izquierda -->
+          <p>Una experiencia completa que revoluciona la forma de vender online.</p>
+          <p><strong>Sin complicaciones. Solo resultados.</strong></p>
+        </div>
+
+        <!-- Tarjetas de beneficios principales -->
+        <div class="beneficios-grid">
           <article class="card-principal">
             <div class="icono">
-              <img alt="" src="img/logos/logo2.png" width="60" />
+              <i class="fa-solid fa-cube"></i>
             </div>
             <h3>Catálogo Inteligente</h3>
-            <p>
-              Tu inventario completo en un solo enlace. Organización <br />
-              automática por categorías con búsqueda instantánea.
-            </p>
+            <p>Tu inventario completo en un solo enlace. Organización automática por categorías con búsqueda instantánea.</p>
             <ul>
               <li>Actualización en tiempo real</li>
               <li>Control de stock automático</li>
               <li>Sin límite de productos</li>
             </ul>
-            <br /><br /><br /><br />
           </article>
-          <!-- Cards derechas -->
-          <section class="cards-secundarias">
-            <article class="card">
-              <img alt="" src="img/logos/logo3.png" width="50" />
-              <h3>WhatsApp Integrado</h3>
-              <p>Conecta directamente con tus clientes.</p>
-            </article>
-            <article class="card">
-              <img alt="" src="img/logos/logo4.png" width="50" />
-              <h3>Analytics en Vivo</h3>
-              <p>Métricas de ventas y productos vistos.</p>
-            </article>
-          </section>
-          <!-- Cards inferiores -->
-          <aside>
-            <article class="card">
-              <img alt="" src="img/logos/logo5.png" width="50" />
-              <h4>Carga Ultrarrápida</h4>
-              <p>Tu catálogo optimizado para velocidad máxima</p>
-            </article>
-            <article class="card">
-              <img alt="" src="img/logos/logo6.png" width="50" />
-              <h4>Promociones Inteligentes</h4>
-              <p>Destacados y ofertas que convierten</p>
-            </article>
-            <article class="card">
-              <img alt="" src="img/logos/logo7.png" width="50" />
-              <h4>Cero Fricción</h4>
-              <p>Tus clientes compran sin registrarse</p>
-            </article>
-          </aside>
-        </section>
-      </section>
-      <section>
-        <h2>¿Listo para llevar tu emprendimiento al siguiente nivel?</h2>
-        <p>
-          Únete a cientos de emprendedores que venden tecnología, belleza,
-          accesorios y <br />
 
-          más con catálogos digitales profesionales
-        </p>
-        <br />
-        <br />
-        <a href="pages/login.html" type="submit"> Empieza Gratis </a>
+          <div class="cards-secundarias">
+            <article class="card-secundaria">
+              <div class="icono whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <h3>WhatsApp Integrado</h3>
+              <p>Conecta directamente con tus clientes y recibe pedidos al instante.</p>
+            </article>
+
+            <article class="card-secundaria">
+              <div class="icono analytics">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h3>Analytics en Vivo</h3>
+              <p>Métricas de ventas y productos más vistos en tiempo real.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Tarjetas de características adicionales -->
+        <div class="beneficios-extra">
+          <article class="extra-card">
+            <div class="icono-extra velocidad">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h4>Carga Ultrarrápida</h4>
+            <p>Tu catálogo optimizado para velocidad máxima</p>
+          </article>
+
+          <article class="extra-card">
+            <div class="icono-extra promociones">
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <h4>Promociones Inteligentes</h4>
+            <p>Destacados y ofertas que convierten</p>
+          </article>
+
+          <article class="extra-card">
+            <div class="icono-extra usuarios">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h4>Cero Fricción</h4>
+            <p>Tus clientes compran sin registrarse</p>
+          </article>
+        </div>
       </section>
+
+      <!-- Sección final con llamada a la acción -->
+      <section id="llamada-accion">
+        <h2>¿Listo para llevar tu emprendimiento al siguiente nivel?</h2>
+        <p>Únete a cientos de emprendedores que venden tecnología, belleza, accesorios y más con catálogos digitales profesionales</p>
+        <div class="cta-botones">
+          <a href="pages/login.html" class="btn-principal">Empezar Gratis</a>
+          <a href="pages/catalogo.html" class="btn-secundario">Ver Demo</a>
+        </div>
+      </section>
+
     </main>
-    <!-- FOOTER -->
+
+    <!-- Pie de página -->
     <footer>
       <p>© 2024 Tu Catálogo Aquí. Todos los derechos reservados.</p>
-      <p>
-        Síguenos en
-        <a href="#">Facebook</a>,
-        <a href="#">Instagram</a>
-      </p>
+      <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Instagram</a></p>
     </footer>
+
   </body>
 </html>

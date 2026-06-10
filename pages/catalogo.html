@@ -1,200 +1,145 @@
 <!doctype html>
-
 <html lang="es">
+
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link
-      href="../img/logos/LOGO-removebg-preview.png"
-      rel="icon"
-      type="image/png"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="../css/general.css" rel="stylesheet" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/logos/LOGO-removebg-preview.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/catalogo.css" />
     <title>Catálogo</title>
   </head>
+
   <body>
+
+    <!-- Encabezado con logo y menú de navegación -->
     <header>
       <figure>
-        <img alt="logo" src="../img//logos/logo.png" width="60" />
+        <img src="../img/logos/logo.png" alt="logo" width="40" />
       </figure>
-      <div>
+      <div class="header-text">
         <h4>Tu Catálogo Aquí</h4>
         <p>Tu tienda digital en un solo enlace</p>
       </div>
-      <nav>
-        <i class="fa-solid fa-house"></i>
-        <!-- Casa -->
-        <a href="../index.html" title="Inicio"> Inicio </a>
-        <i class="fa-solid fa-cart-shopping"></i>
-        <!-- Carrito -->
-        <a href="#" title="Catálogo"> Catálogo </a>
-        <i class="fa-solid fa-user"></i>
-        <!-- Usuario -->
-        <a href="login.html" title="Admin"> Admin </a>
-        <i class="fa-solid fa-phone"></i>
-        <!-- Teléfono -->
-        <a href="contacto.html" title="Contacto"> Contacto </a>
+      <nav class="nav-links">
+        <a href="../index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="#"><i class="fa-solid fa-cart-shopping"></i> Catálogo</a>
+        <a href="login.html"><i class="fa-solid fa-user"></i> Admin</a>
+        <a href="contacto.html"><i class="fa-solid fa-phone"></i> Contacto</a>
       </nav>
     </header>
+
     <main>
-      <!-- Hero -->
-      <section>
+
+      <!-- Sección hero con título y botones -->
+      <section id="hero-catalogo">
         <h1>Descubre productos únicos</h1>
-        <p>
-          Tecnología, belleza, accesorios y mucho más. Todo lo que buscas en un
-          solo lugar.
-        </p>
-        <button title="Ver el Catalogo Demo">Ver Colección</button>
+        <p>Tecnología, belleza, accesorios y mucho más. Todo lo que buscas en un solo lugar.</p>
+        <button title="Ver el Catálogo Demo">Ver Colección</button>
         <button title="Ver Promociones">Promociones</button>
       </section>
-      <section>
-        <!-- Caja tienda -->
-        <div>
+
+      <!-- Información de la tienda y estadísticas -->
+      <section id="info-tienda">
+        <div class="caja-tienda">
           <figure>
-            <img
-              alt="logoEmprendedor"
-              src="../img/logos/logoadmin.png"
-              width="80"
-            />
+            <img src="../img/logos/logoadmin.png" alt="Logo del emprendedor" width="80" />
           </figure>
           <h3>Tienda Demo</h3>
-          <p>
-            Tu tienda digital con los mejores productos de tecnología, belleza y
-            más.
-          </p>
+          <p>Tu tienda digital con los mejores productos de tecnología, belleza y más.</p>
           <p>Ciudad de México, México</p>
-          <button title="Contactar por WhatsApp">Contactar por WhatsApp</button>
+          <button title="Contactar por WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i> Contactar por WhatsApp
+          </button>
         </div>
-        <!-- Caja información -->
-        <div>
+
+        <div class="caja-info">
           <h2>¿Por qué elegir nuestra tienda?</h2>
-          <p>
-            Ofrecemos prendas modernas, cómodas y accesibles para todos los
-            estilos.
-          </p>
-          <div>
-            <div>
+          <p>Ofrecemos prendas modernas, cómodas y accesibles para todos los estilos.</p>
+          <div class="estadisticas-tienda">
+            <div class="stat">
               <h3>+500</h3>
               <p>Clientes felices</p>
             </div>
-            <div>
+            <div class="stat">
               <h3>100%</h3>
               <p>Moda actual</p>
             </div>
-            <div>
+            <div class="stat">
               <h3>24/7</h3>
               <p>Atención online</p>
             </div>
           </div>
         </div>
       </section>
-      <section>
+
+      <!-- Buscador de productos -->
+      <section id="seccion-busqueda">
         <h2>Nuestra Colección</h2>
-        <p>
-          Explora nuestras prendas más populares y descubre tu próximo outfit.
-        </p>
-        <input
-          id="buscar-productos"
-          placeholder="Buscar productos"
-          type="search"
-        />
+        <p>Explora nuestras prendas más populares y descubre tu próximo outfit.</p>
+        <input id="buscar-productos" type="search" placeholder="🔍  Buscar productos" />
       </section>
-      <section>
+
+      <!-- Cuadrícula de productos -->
+      <section id="grid-productos">
         <article>
-          <img
-            alt="Vestido Floral"
-            src="../img/productos/vestidofloral.png"
-            width="180"
-          />
+          <img src="../img/productos/vestidofloral.png" alt="Vestido Floral" width="180" />
           <h3>Vestido Elegante Floral</h3>
           <p>$49.99</p>
           <button>Comprar</button>
         </article>
         <article>
-          <img
-            alt="Blusa Blanca"
-            src="../img/productos/blusacasual.png"
-            width="180"
-          />
+          <img src="../img/productos/blusacasual.png" alt="Blusa Blanca" width="180" />
           <h3>Blusa Casual Blanca</h3>
           <p>$22.00</p>
           <button>Comprar</button>
         </article>
         <article>
-          <img
-            alt="Vestido de Fiesta"
-            src="../img/productos/vestidofiesta.png"
-            width="180"
-          />
+          <img src="../img/productos/vestidofiesta.png" alt="Vestido de Fiesta" width="180" />
           <h3>Vestido Largo de Fiesta</h3>
           <p>$45.00</p>
           <button>Comprar</button>
         </article>
         <article>
-          <img
-            alt="Blusa Oversize"
-            src="../img/productos/blusamoderna.png"
-            width="180"
-          />
+          <img src="../img/productos/blusamoderna.png" alt="Blusa Oversize" width="180" />
           <h3>Blusa Oversize Moderna</h3>
           <p>$18.00</p>
           <button>Comprar</button>
         </article>
         <article>
-          <img
-            alt="Falda Beige"
-            src="../img/productos/faldaplisada.png"
-            width="180"
-          />
+          <img src="../img/productos/faldaplisada.png" alt="Falda Beige" width="180" />
           <h3>Falda Plisada Beige</h3>
           <p>$25.00</p>
           <button>Comprar</button>
         </article>
         <article>
-          <img
-            alt="Vestido Primavera"
-            src="../img/productos/vestidoprimavera.png"
-            width="180"
-          />
+          <img src="../img/productos/vestidoprimavera.png" alt="Vestido Primavera" width="180" />
           <h3>Vestido Casual Primavera</h3>
           <p>$32.49</p>
           <button>Comprar</button>
         </article>
         <article>
-          <img
-            alt="Blusa Satinada"
-            src="../img/productos/blusasatinada.png"
-            width="180"
-          />
+          <img src="../img/productos/blusasatinada.png" alt="Blusa Satinada" width="180" />
           <h3>Blusa Satinada Premium</h3>
           <p>$15.00</p>
           <button>Comprar</button>
         </article>
         <article>
-          <img
-            alt="Chaqueta Denim"
-            src="../img/productos/chaqueta.png"
-            width="180"
-          />
+          <img src="../img/productos/chaqueta.png" alt="Chaqueta Denim" width="180" />
           <h3>Chaqueta Denim Urbana</h3>
           <p>$20.00</p>
           <button>Comprar</button>
         </article>
       </section>
+
     </main>
-    <!-- FOOTER -->
+
+    <!-- Pie de página -->
     <footer>
       <p>© 2024 Tu Catálogo Aquí. Todos los derechos reservados.</p>
-      <p>
-        Síguenos en
-        <a href="#">Facebook</a>,
-        <a href="#">Instagram</a>
-      </p>
+      <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Instagram</a></p>
     </footer>
+
   </body>
 </html>

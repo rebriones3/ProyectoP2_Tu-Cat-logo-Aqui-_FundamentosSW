@@ -1,201 +1,139 @@
 <!doctype html>
-
 <html lang="es">
+
   <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link
-      href="../img/logos/LOGO-removebg-preview.png"
-      rel="icon"
-      type="image/png"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="../css/general.css" rel="stylesheet" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../img/logos/LOGO-removebg-preview.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/contacto.css" />
     <title>Contacto</title>
   </head>
+
   <body>
+
+    <!-- Encabezado con logo y menú de navegación -->
     <header>
-      <nav>
-        <figure>
-          <img alt="logo" src="../img/logos/logo.png" width="60" />
-        </figure>
-        <div>
-          <h3>Tu Catálogo Aquí</h3>
-          <p>Tu tienda digital en un solo enlace</p>
-        </div>
-        <i class="fa-solid fa-house"></i>
-        <!-- Casa -->
-        <a href="../index.html"> Inicio </a>
-        <i class="fa-solid fa-cart-shopping"></i>
-        <!-- Carrito -->
-        <a href="catalogo.html"> Catálogo </a>
-        <i class="fa-solid fa-user"></i>
-        <!-- Usuario -->
-        <a href="login.html"> Admin </a>
-        <i class="fa-solid fa-phone"></i>
-        <!-- Teléfono -->
-        <a href="#"> Contacto </a>
+      <figure>
+        <img src="../img/logos/logo.png" alt="logo" width="60" />
+      </figure>
+      <div class="header-text">
+        <h4>Tu Catálogo Aquí</h4>
+        <p>Tu tienda digital en un solo enlace</p>
+      </div>
+      <nav class="nav-links">
+        <a href="../index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="catalogo.html"><i class="fa-solid fa-cart-shopping"></i> Catálogo</a>
+        <a href="login.html"><i class="fa-solid fa-user"></i> Admin</a>
+        <a href="#"><i class="fa-solid fa-phone"></i> Contacto</a>
       </nav>
     </header>
-    <!-- MAIN -->
+
     <main>
-      <!-- PRESENTACIÓN -->
-      <section>
+
+      <!-- Sección hero con título de la página -->
+      <section id="hero-contacto">
         <h1>Contáctanos</h1>
-        <p>
-          ¿Tienes preguntas sobre nuestros productos o servicios? Escríbenos y
-          te responderemos lo antes posible.
-        </p>
+        <p>¿Tienes preguntas sobre nuestros productos o servicios? Escríbenos y te responderemos lo antes posible.</p>
       </section>
-      <!-- FORMULARIO -->
-      <section>
-        <form action="#" method="post">
-          <!-- Nombre -->
-          <label for="nombre"> Nombre completo </label>
-          <br /><br />
-          <input
-            id="nombre"
-            name="nombre"
-            placeholder="Ingrese su nombre"
-            required=""
-            type="text"
-          />
-          <br /><br />
-          <!-- Correo -->
-          <label for="correo"> Correo electrónico </label>
-          <br /><br />
-          <input
-            id="correo"
-            name="correo"
-            placeholder="correo@ejemplo.com"
-            required=""
-            type="email"
-          />
-          <br /><br />
-          <!-- Telefono -->
-          <label for="telefono"> Número de teléfono </label>
-          <br /><br />
-          <input
-            id="telefono"
-            name="telefono"
-            placeholder="0999999999"
-            type="tel"
-          />
-          <br /><br />
-          <!-- Motivo -->
-          <label for="motivo"> Motivo de contacto </label>
-          <br /><br />
-          <select id="motivo" name="motivo">
-            <option>Información</option>
-            <option>Soporte</option>
-            <option>Compras</option>
-            <option>Sugerencias</option>
-          </select>
-          <br /><br />
-          <!-- Mensaje -->
-          <label for="mensaje"> Mensaje </label>
-          <br /><br />
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            placeholder="Escriba su mensaje..."
-            rows="6"
-          ></textarea>
-          <br /><br />
-          <!-- Checkbox -->
-          <input id="terminos" name="terminos" required="" type="checkbox" />
-          <label for="terminos"> Acepto los términos y condiciones </label>
-          <br /><br /><br />
-          <!-- Botón -->
-          <button type="submit">Enviar mensaje</button>
-        </form>
-      </section>
-      <br /><br />
-      <section>
-        <h3>Preguntas frecuentes</h3>
-        <details>
-          <summary>
-            ¿Cuánto tiempo tarda en responder el equipo de soporte?
-          </summary>
-          <p>Normalmente respondemos dentro de las 24 horas hábiles.</p>
-        </details>
-        <hr />
-        <details>
-          <summary>¿Puedo solicitar una devolución?</summary>
+
+      <!-- Contenido principal: formulario a la izquierda, info a la derecha -->
+      <div class="contenido-contacto">
+
+        <!-- Columna izquierda: formulario y preguntas frecuentes -->
+        <div class="columna-formulario">
+
+          <!-- Formulario de contacto -->
+          <section id="formulario-contacto">
+            <h2>Envíanos un mensaje</h2>
+            <form action="#" method="post">
+              <label for="nombre">Nombre completo</label>
+              <input id="nombre" name="nombre" type="text" placeholder="Ingrese su nombre" required />
+
+              <label for="correo">Correo electrónico</label>
+              <input id="correo" name="correo" type="email" placeholder="correo@ejemplo.com" required />
+
+              <label for="telefono">Número de teléfono</label>
+              <input id="telefono" name="telefono" type="tel" placeholder="0999999999" />
+
+              <label for="motivo">Motivo de contacto</label>
+              <select id="motivo" name="motivo">
+                <option>Información</option>
+                <option>Soporte</option>
+                <option>Compras</option>
+                <option>Sugerencias</option>
+              </select>
+
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escriba su mensaje..."></textarea>
+
+              <!-- Casilla de aceptación de términos -->
+              <div class="terminos">
+                <input id="terminos" name="terminos" type="checkbox" required />
+                <label for="terminos">Acepto los términos y condiciones</label>
+              </div>
+
+              <button type="submit">Enviar mensaje</button>
+            </form>
+          </section>
+
+          <!-- Preguntas frecuentes -->
+          <section id="preguntas-frecuentes">
+            <h3>Preguntas frecuentes</h3>
+            <details>
+              <summary>¿Cuánto tiempo tarda en responder el equipo de soporte?</summary>
+              <p>Normalmente respondemos dentro de las 24 horas hábiles.</p>
+            </details>
+            <hr />
+            <details>
+              <summary>¿Puedo solicitar una devolución?</summary>
+              <p>Sí, ofrecemos devoluciones dentro de los 30 días posteriores a la compra.</p>
+            </details>
+            <hr />
+            <details>
+              <summary>¿Cómo puedo actualizar mi información de contacto?</summary>
+              <p>Puedes actualizar tu información de contacto en tu perfil de usuario o contactándonos directamente.</p>
+            </details>
+          </section>
+
+        </div>
+
+        <!-- Columna derecha: información de contacto -->
+        <aside class="info-contacto">
+          <h3>Información de contacto</h3>
+          <p><i class="fa-solid fa-location-dot"></i> Santo Domingo de los Tsáchilas, Ecuador</p>
           <p>
-            Sí, ofrecemos devoluciones dentro de los 30 días posteriores a la
-            compra.
+            <i class="fa-brands fa-whatsapp"></i>
+            <a href="https://wa.me/593996494273" target="_blank">+593 99 649 4273</a>
           </p>
-        </details>
-        <hr />
-        <details>
-          <summary>¿Cómo puedo actualizar mi información de contacto?</summary>
           <p>
-            Puedes actualizar tu información de contacto en tu perfil de usuario
-            o contactándonos directamente.
+            <i class="fa-solid fa-at"></i>
+            <a href="mailto:tucatalogoaqui@gmail.com">tucatalogoaqui@gmail.com</a>
           </p>
-        </details>
-        <hr />
-      </section>
-      <!-- INFORMACIÓN -->
-      <aside>
-        <h3>Información de contacto</h3>
-        <p>Santo Domingo de los Tsáchilas - Ecuador</p>
-        <!-- WhatsApp -->
-        <p>
-          <i class="fa-brands fa-whatsapp"></i>
-          <a href="https://wa.me/593996494273" target="_blank">
-            WhatsApp: +593 99 649 4273
-          </a>
-        </p>
-        <!-- Correo -->
-        <p>
-          <i class="fa-solid fa-at"></i>
-          <a href="mailto:tucatalogoaqui@gmail.com">
-            tucatalogoaqui@gmail.com
-          </a>
-        </p>
-        <!-- Facebook -->
-        <p>
-          <i class="fa-brands fa-facebook"></i>
-          <a
-            href="https://www.facebook.com/estefany.brioness/?locale=es_LA"
-            target="_blank"
-          >
-            Facebook
-          </a>
-        </p>
-        <!-- Instagram -->
-        <p>
-          <i class="fa-brands fa-instagram"></i>
-          <a href="https://www.instagram.com/ruuth.estefany/" target="_blank">
-            Instagram
-          </a>
-        </p>
-        <!-- Google Maps -->
-        <p>
-          <i class="fa-solid fa-map"></i>
-          <a
-            href="https://www.google.com/maps/@-0.3735552,-78.4171008,12z?entry=ttu&amp;g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D"
-            target="_blank"
-          >
-            Google Maps
-          </a>
-        </p>
-      </aside>
+          <p>
+            <i class="fa-brands fa-facebook"></i>
+            <a href="https://www.facebook.com/estefany.brioness/?locale=es_LA" target="_blank">Facebook</a>
+          </p>
+          <p>
+            <i class="fa-brands fa-instagram"></i>
+            <a href="https://www.instagram.com/ruuth.estefany/" target="_blank">Instagram</a>
+          </p>
+          <p>
+            <i class="fa-solid fa-map"></i>
+            <a href="https://www.google.com/maps/@-0.3735552,-78.4171008,12z" target="_blank">Google Maps</a>
+          </p>
+        </aside>
+
+      </div>
+
     </main>
-    <!-- FOOTER -->
+
+    <!-- Pie de página -->
     <footer>
       <p>© 2024 Tu Catálogo Aquí. Todos los derechos reservados.</p>
-      <p>
-        Síguenos en
-        <a href="#">Facebook</a>,
-        <a href="#">Instagram</a>
-      </p>
+      <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Instagram</a></p>
     </footer>
+
   </body>
 </html>

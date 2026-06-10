@@ -1,6 +1,6 @@
 /* ============================================================
-   BLOQUE 1: CONFIGURACIÓN GENERAL
-   Selector universal, body, fuente, fondo, color e interlineado.
+   BLOQUE 1: RESET Y CONFIGURACIÓN BASE
+   Elimina márgenes y padding por defecto en todos los elementos.
    ============================================================ */
 
 * {
@@ -10,15 +10,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Segoe UI;
     background-color: #f0f4ff;
     color: #1a1a2e;
     line-height: 1.7;
 }
 
 /* ============================================================
-   BLOQUE 2: TÍTULOS, PÁRRAFOS Y ENLACES
-   Estilos para h1, h2, h3, p, a y a:hover.
+   BLOQUE 2: TIPOGRAFÍA
+   Estilos base para títulos, párrafos y enlaces.
    ============================================================ */
 
 h1 {
@@ -49,117 +49,107 @@ p {
     font-size: 1em;
     margin-bottom: 10px;
     line-height: 1.7;
+    text-align: center;
 }
 
 a {
-    color: darkblue;
+    color: black;
     text-decoration: none;
     margin: 0 8px;
 }
 
-a:hover {
-    color: #4169e1;
-    text-decoration: underline;
-}
-
 /* ============================================================
-   BLOQUE 3: ELEMENTOS SEMÁNTICOS PRINCIPALES
-   Estilos para header, nav, main, section, article, aside y footer.
+   BLOQUE 3: ENCABEZADO (HEADER)
+   Barra superior fija con logo, nombre y navegación.
    ============================================================ */
 
 header {
     background-color: white;
-    padding: 20px 30px;
-    text-align: center;
-    border-bottom: 2px solid #dce3ff;
+    padding: 15px 250px;
+    height: 64px;
+    border-bottom: 2.5px solid darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    text-align: left;
+    margin-right: auto;
+}
+
+header h4 {
+    font-size: 1.3em;
+    color: #000000;
+    margin-bottom: 0;
+    text-align: left;
 }
 
 header p {
-    text-align: center;
-    margin-top: 8px;
-    font-size: 1em;
-}
-
-nav {
-    background-color: white;
-    padding: 20px 30px;
-    text-align: center;
-    border-bottom: 2px solid #dce3ff;
-}
-
-main {
-    padding: 30px;
-    min-height: 70vh;
-}
-
-section {
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
-article {
-    background-color: white;
-    border: 1px solid #dcdcdc;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 15px;
-}
-
-aside {
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-footer {
-    background-color: #333333;
-    color: white;
-    text-align: center;
-    padding: 20px 30px;
+    font-size: 0.7em;
+    color: #555577;
+    margin-top: 0;
+    text-align: left;
 }
 
 /* ============================================================
-   BLOQUE 4: MENÚ DE NAVEGACIÓN
-   Estilos para nav, nav a y nav a:hover.
+   BLOQUE 4: NAVEGACIÓN
+   Estilos para el menú de enlaces del header.
    ============================================================ */
 
-nav a {
-    color: darkblue;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    font-size: 0.95em;
-    padding: 5px 8px;
-}
-
-nav a:hover {
-    background-color: darkblue;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-nav ul {
-    list-style: none;
+.nav-links {
+    display: flex;
+    align-items: center;
+    background-color: white;
     padding: 0;
     margin: 0;
 }
 
-nav li {
-    display: inline-block;
-    margin: 0 8px;
+.nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #1a1a2e;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    background-color: #eef1ff;
+    color: darkblue;
+}
+
+.nav-links a i {
+    font-size: 13px;
 }
 
 /* ============================================================
-   BLOQUE 5: CONTENIDO Y SECCIONES
-   Estilos para main, section, article y aside.
+   BLOQUE 5: ESTRUCTURA SEMÁNTICA
+   Estilos base para main, section, article y aside.
    ============================================================ */
 
-main section {
+main {
+    min-height: 70vh;
+}
+
+section {
     background-color: white;
-    border-radius: 10px;
-    padding: 30px;
-    margin-bottom: 25px;
+    text-align: center;
 }
 
 section article {
@@ -175,9 +165,24 @@ section aside {
     border-radius: 8px;
 }
 
+article {
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
 article img {
     border: 1px solid #dcdcdc;
     border-radius: 8px;
+}
+
+aside {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 hr {
@@ -188,7 +193,7 @@ hr {
 
 /* ============================================================
    BLOQUE 6: IMÁGENES Y MULTIMEDIA
-   Estilos para img, figure, figcaption, video, audio e iframe.
+   Estilos para imágenes, video, audio e iframe.
    ============================================================ */
 
 img {
@@ -236,13 +241,13 @@ iframe {
 
 /* ============================================================
    BLOQUE 7: LISTAS
-   Estilos para ul, ol y li.
+   Estilos para listas con viñetas y numeradas.
    ============================================================ */
 
 ul {
     list-style: disc;
-    padding-left: 20px;
     margin-bottom: 15px;
+    display: inline-block;
 }
 
 ol {
@@ -254,11 +259,12 @@ ol {
 li {
     margin-bottom: 6px;
     line-height: 1.6;
+    text-align: center;
 }
 
 /* ============================================================
    BLOQUE 8: FORMULARIOS
-   Estilos para form, label, input, textarea, select y button.
+   Estilos para campos, botones y elementos interactivos.
    ============================================================ */
 
 form {
@@ -368,7 +374,7 @@ meter {
 
 /* ============================================================
    BLOQUE 9: TABLAS
-   Estilos para table, thead, tbody, tr, th y td.
+   Estilos para encabezado, filas y celdas de tablas.
    ============================================================ */
 
 table {
@@ -402,10 +408,6 @@ tbody tr:nth-child(even) {
     background-color: #f0f4ff;
 }
 
-tr {
-    background-color: #f5f5f5;
-}
-
 th {
     padding: 15px;
     border: 1px solid #dcdcdc;
@@ -422,38 +424,38 @@ td {
 }
 
 /* ============================================================
-   BLOQUE 10: PIE DE PÁGINA
-   Estilos para footer, footer p y footer address.
+   BLOQUE 10: PIE DE PÁGINA (FOOTER)
+   Barra inferior con texto de derechos y enlaces de redes.
    ============================================================ */
 
 footer {
-    background-color: #333333;
-    color: white;
+    background-color: white;
+    color: #000000;
     text-align: center;
     padding: 20px 30px;
 }
 
 footer p {
-    color: #cccccc;
+    color: #272626;
     font-size: 0.9em;
     margin-bottom: 6px;
     text-align: center;
 }
 
 footer a {
-    color: white;
+    color: #222222;
     text-decoration: none;
     margin: 0 5px;
 }
 
 footer a:hover {
-    color: #aabbff;
+    color: #1b37a5;
     text-decoration: underline;
 }
 
 footer address {
     font-style: normal;
-    color: #aaaaaa;
+    color: #200f0f;
     font-size: 0.85em;
     margin-top: 10px;
     text-align: center;
