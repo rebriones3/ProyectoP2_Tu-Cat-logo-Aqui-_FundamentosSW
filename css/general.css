@@ -1,141 +1,99 @@
 /* ============================================================
-   BLOQUE 1: RESET Y CONFIGURACIÓN BASE
-   Elimina márgenes y padding por defecto en todos los elementos.
+   BLOQUE 1: RESET Y BOX MODEL GLOBAL
+   Se aplica a todos los elementos para un modelo de caja limpio.
    ============================================================ */
-
+ 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
+ 
 body {
-    font-family: Segoe UI;
-    background-color: #f0f4ff;
-    color: #1a1a2e;
-    line-height: 1.7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9fb;
+  color: #2d2d2d;
+  line-height: 1.6;
 }
+ 
 
 /* ============================================================
-   BLOQUE 2: TIPOGRAFÍA
-   Estilos base para títulos, párrafos y enlaces.
+   BLOQUE 2: HEADER GENERAL (Flexbox)
+   Barra superior compartida en todas las páginas del sitio.
    ============================================================ */
-
-h1 {
-    font-size: 2.2em;
-    color: darkblue;
-    margin-bottom: 15px;
-}
-
-h2 {
-    font-size: 1.7em;
-    color: darkblue;
-    margin-bottom: 12px;
-}
-
-h3 {
-    font-size: 1.2em;
-    color: darkblue;
-    margin-bottom: 10px;
-}
-
-h4 {
-    font-size: 1em;
-    color: darkblue;
-    margin-bottom: 8px;
-}
-
-p {
-    font-size: 1em;
-    margin-bottom: 10px;
-    line-height: 1.7;
-    text-align: center;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-    margin: 0 8px;
-}
-
-/* ============================================================
-   BLOQUE 3: ENCABEZADO (HEADER)
-   Barra superior fija con logo, nombre y navegación.
-   ============================================================ */
-
+ 
 header {
-    background-color: white;
-    padding: 15px 250px;
-    height: 64px;
-    border-bottom: 2.5px solid darkblue;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 32px;
+  background-color: #fff;
+  border-bottom: 2px solid #ececec;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  width: 100%;
 }
-
-header img {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
+ 
+header figure {
+  margin: 0;
+  flex-shrink: 0;
 }
-
+ 
+header figure img {
+  display: block;
+  border-radius: 8px;
+  height: auto;
+}
+ 
+/* ============================================================
+   BLOQUE 3: TEXTO DEL HEADER
+   Nombre del sitio y subtítulo junto al logo.
+   ============================================================ */
+ 
 .header-text {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    text-align: left;
-    margin-right: auto;
+  flex: 1;
 }
-
-header h4 {
-    font-size: 1.3em;
-    color: #000000;
-    margin-bottom: 0;
-    text-align: left;
+ 
+.header-text h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #06005caf;
+  margin-bottom: 2px;
 }
-
-header p {
-    font-size: 0.7em;
-    color: #555577;
-    margin-top: 0;
-    text-align: left;
+ 
+.header-text p {
+  font-size: 0.78rem;
+  color: #888;
 }
-
+ 
 /* ============================================================
    BLOQUE 4: NAVEGACIÓN
    Estilos para el menú de enlaces del header.
    ============================================================ */
-
 .nav-links {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
 }
-
+ 
 .nav-links a {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 13.5px;
-    font-weight: 500;
-    color: #1a1a2e;
-    white-space: nowrap;
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #555;
+  transition: background 0.2s, color 0.2s;
+  border: 1px solid transparent;
 }
-
+ 
 .nav-links a:hover {
-    background-color: #eef1ff;
-    color: darkblue;
-}
-
-.nav-links a i {
-    font-size: 13px;
+  background-color: #0151bb;
+  color: #fff;
 }
 
 /* ============================================================
@@ -429,34 +387,55 @@ td {
    ============================================================ */
 
 footer {
-    background-color: white;
-    color: #000000;
-    text-align: center;
-    padding: 20px 30px;
+  background-color: #2d2d2d;
+  color: #ccc;
+  text-align: center;
+  padding: 24px 32px;
+  margin-top: 60px;
+  font-size: 0.88rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
-
-footer p {
-    color: #272626;
-    font-size: 0.9em;
-    margin-bottom: 6px;
-    text-align: center;
-}
-
+ 
 footer a {
-    color: #222222;
-    text-decoration: none;
-    margin: 0 5px;
+  color: #4362ff;
+  text-decoration: none;
 }
-
+ 
 footer a:hover {
-    color: #1b37a5;
-    text-decoration: underline;
+  color: #fff;
 }
+ 
 
-footer address {
-    font-style: normal;
-    color: #200f0f;
-    font-size: 0.85em;
-    margin-top: 10px;
-    text-align: center;
+/* ============================================================
+   RESPONSIVE GENERAL
+   Adaptaciones del header y nav para pantallas pequeñas.
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    /* El header apila logo+texto arriba y nav abajo */
+    header {
+        flex-wrap: wrap;
+        padding: 12px 16px;
+        gap: 10px;
+    }
+
+    .header-text {
+        flex: 1;
+        min-width: 0;
+    }
+
+    /* La nav ocupa toda la fila en móvil */
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
 }

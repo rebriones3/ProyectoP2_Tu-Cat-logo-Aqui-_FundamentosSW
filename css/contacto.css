@@ -24,20 +24,23 @@
 }
 
 /* ============================================================
-   BLOQUE 2: LAYOUT DE DOS COLUMNAS
+   BLOQUE 2: LAYOUT DE DOS COLUMNAS (Grid)
    Formulario a la izquierda, información de contacto a la derecha.
+   grid-template-columns divide el ancho; grid-template-rows
+   permite que el aside se estire con la columna izquierda.
    ============================================================ */
 
 .contenido-contacto {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto;
     gap: 30px;
     padding: 60px 10%;
     background: #f7f9fc;
-    align-items: flex-start;
+    align-items: start;
 }
 
 .columna-formulario {
-    flex: 1.5;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -94,24 +97,27 @@
 
 .terminos {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    align-items: flex-start;
+    gap: 10px;
     margin-bottom: 24px;
+    width: 100%;
 }
 
-.terminos input[type="checkbox"] {
-    width: auto;
+.terminos input {
+    width: auto !important;
     margin: 0;
+    margin-top: 2px;
     accent-color: #2846b8;
 }
 
 .terminos label {
-    font-size: 13px;
-    color: #60708d;
+    display: inline;
     margin: 0;
-    font-weight: 400;
+    text-align: left !important;
+    color: #60708d;
+    font-size: 13px;
+    font-weight: 500;
 }
-
 #formulario-contacto button[type="submit"] {
     width: 100%;
     padding: 13px;
@@ -186,10 +192,17 @@
 /* ============================================================
    BLOQUE 5: INFORMACIÓN DE CONTACTO (ASIDE)
    Card azul lateral con datos de ubicación y redes sociales.
+   El selector aside separa visualmente este bloque del resto
+   de secciones (section, div, article) del main.
    ============================================================ */
 
+/* Separación visual del aside respecto al resto del contenido */
+aside {
+    display: block;
+    border-left: 4px solid rgba(255, 255, 255, 0.2);
+}
+
 .info-contacto {
-    flex: 1;
     background: #2846b8;
     border-radius: 24px;
     padding: 36px 30px;
@@ -243,8 +256,14 @@
         font-size: 32px;
     }
 
+    /* El grid de dos columnas pasa a una sola columna en móvil */
     .contenido-contacto {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         padding: 36px 6%;
+    }
+
+    aside {
+        border-left: none;
+        border-top: 4px solid rgba(255, 255, 255, 0.2);
     }
 }
