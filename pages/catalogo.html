@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="es">
-
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../img/logos/LOGO-removebg-preview.png" type="image/png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/catalogo.css" />
     <title>Catálogo</title>
@@ -13,34 +13,83 @@
 
   <body>
 
-    <!-- Encabezado con logo y menú de navegación -->
-    <header>
-      <figure>
-        <img src="../img/logos/logo.png" alt="logo" width="40" />
-      </figure>
-      <div class="header-text">
-        <h4>Tu Catálogo Aquí</h4>
-        <p>Tu tienda digital en un solo enlace</p>
+    <!-- NAVBAR BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <figure>
+            <img src="../img/logos/logo.png" alt="logo" width="40" />
+          </figure>
+          <div class="navbar-brand-text">
+            <h4>Tu Catálogo Aquí</h4>
+            <p>Tu tienda digital en un solo enlace</p>
+          </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuMovilCatalogo" aria-controls="menuMovilCatalogo" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav gap-1">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"><i class="fa-solid fa-cart-shopping"></i> Catálogo</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user"></i> Admin
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</a></li>
+                <li><a class="dropdown-item" href="registrarse.html"><i class="fa-solid fa-user-plus"></i> Registrarse</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html"><i class="fa-solid fa-phone"></i> Contacto</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <nav class="nav-links">
-        <a href="../index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-        <a href="#"><i class="fa-solid fa-cart-shopping"></i> Catálogo</a>
-        <a href="login.html"><i class="fa-solid fa-user"></i> Admin</a>
-        <a href="contacto.html"><i class="fa-solid fa-phone"></i> Contacto</a>
-      </nav>
-    </header>
+    </nav>
+
+    <!-- OFFCANVAS móvil -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="menuMovilCatalogo" aria-labelledby="menuMovilCatalogoLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="menuMovilCatalogoLabel">Tu Catálogo Aquí</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav flex-column gap-1">
+          <li class="nav-item"><a class="nav-link" href="../index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i> Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa-solid fa-user"></i> Admin</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="fa-solid fa-phone"></i> Contacto</a></li>
+        </ul>
+      </div>
+    </div>
 
     <main>
 
-      <!-- Sección hero con título y botones -->
+      <!-- Hero catálogo -->
       <section id="hero-catalogo">
         <h1>Descubre productos únicos</h1>
         <p>Tecnología, belleza, accesorios y mucho más. Todo lo que buscas en un solo lugar.</p>
         <button title="Ver el Catálogo Demo">Ver Colección</button>
         <button title="Ver Promociones">Promociones</button>
+        <div class="spinners-catalogo">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Cargando...</span>
+          </div>
+          <div class="spinner-grow" role="status">
+            <span class="visually-hidden">Cargando...</span>
+          </div>
+        </div>
       </section>
 
-      <!-- Información de la tienda y estadísticas -->
+      <!-- Info de la tienda -->
       <section id="info-tienda">
         <div class="caja-tienda">
           <figure>
@@ -58,88 +107,379 @@
           <h2>¿Por qué elegir nuestra tienda?</h2>
           <p>Ofrecemos prendas modernas, cómodas y accesibles para todos los estilos.</p>
           <div class="estadisticas-tienda">
-            <div class="stat">
-              <h3>+500</h3>
-              <p>Clientes felices</p>
-            </div>
-            <div class="stat">
-              <h3>100%</h3>
-              <p>Moda actual</p>
-            </div>
-            <div class="stat">
-              <h3>24/7</h3>
-              <p>Atención online</p>
-            </div>
+            <div class="stat"><h3>+500</h3><p>Clientes felices</p></div>
+            <div class="stat"><h3>100%</h3><p>Moda actual</p></div>
+            <div class="stat"><h3>24/7</h3><p>Atención online</p></div>
           </div>
         </div>
       </section>
 
-      <!-- Buscador de productos -->
-      <section id="seccion-busqueda">
-        <h2>Nuestra Colección</h2>
-        <p>Explora nuestras prendas más populares y descubre tu próximo outfit.</p>
-        <input id="buscar-productos" type="search" placeholder="🔍  Buscar productos" />
+        <!-- CARRUSEL DE PROMOCIONES BOOTSTRAP -->
+      <section class="seccion-promociones">
+        <div id="carruselPromociones" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carruselPromociones" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Promoción 1"></button>
+            <button type="button" data-bs-target="#carruselPromociones" data-bs-slide-to="1" aria-label="Promoción 2"></button>
+            <button type="button" data-bs-target="#carruselPromociones" data-bs-slide-to="2" aria-label="Promoción 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../img/productos/vestidofloral.png" class="d-block w-100" alt="Vestido Floral en oferta" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Vestido Elegante Floral</h5>
+                <p>Solo por esta semana — <strong>$49.99</strong>. Envío gratis en tu primera compra.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../img/productos/blusasatinada.png" class="d-block w-100" alt="Blusa Satinada en oferta" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Blusa Satinada Premium</h5>
+                <p>Precio especial — <strong>$15.00</strong>. Stock limitado, no te quedes sin la tuya.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../img/productos/vestidoprimavera.png" class="d-block w-100" alt="Vestido Primavera en oferta" />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Vestido Casual Primavera</h5>
+                <p>Colección nueva — <strong>$32.49</strong>. Perfecto para la temporada.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carruselPromociones" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carruselPromociones" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
       </section>
 
-      <!-- Cuadrícula de productos -->
+      <!-- Buscador -->
+      <nav class="navbar-busqueda">
+        <div class="busqueda-inner">
+          <h2>Nuestra Colección</h2>
+          <p>Explora nuestras prendas más populares y descubre tu próximo outfit.</p>
+          <form class="d-flex busqueda-form" role="search">
+            <input id="buscar-productos" class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Buscar" />
+            <button class="btn-buscar" type="submit">Buscar</button>
+          </form>
+        </div>
+      </nav>
+
+      <!-- GRID DE PRODUCTOS -->
       <section id="grid-productos">
-        <article>
-          <img src="../img/productos/vestidofloral.png" alt="Vestido Floral" width="180" />
-          <h3>Vestido Elegante Floral</h3>
-          <p>$49.99</p>
-          <button>Comprar</button>
-        </article>
-        <article>
-          <img src="../img/productos/blusacasual.png" alt="Blusa Blanca" width="180" />
-          <h3>Blusa Casual Blanca</h3>
-          <p>$22.00</p>
-          <button>Comprar</button>
-        </article>
-        <article>
-          <img src="../img/productos/vestidofiesta.png" alt="Vestido de Fiesta" width="180" />
-          <h3>Vestido Largo de Fiesta</h3>
-          <p>$45.00</p>
-          <button>Comprar</button>
-        </article>
-        <article>
-          <img src="../img/productos/blusamoderna.png" alt="Blusa Oversize" width="180" />
-          <h3>Blusa Oversize Moderna</h3>
-          <p>$18.00</p>
-          <button>Comprar</button>
-        </article>
-        <article>
-          <img src="../img/productos/faldaplisada.png" alt="Falda Beige" width="180" />
-          <h3>Falda Plisada Beige</h3>
-          <p>$25.00</p>
-          <button>Comprar</button>
-        </article>
-        <article>
-          <img src="../img/productos/vestidoprimavera.png" alt="Vestido Primavera" width="180" />
-          <h3>Vestido Casual Primavera</h3>
-          <p>$32.49</p>
-          <button>Comprar</button>
-        </article>
-        <article>
-          <img src="../img/productos/blusasatinada.png" alt="Blusa Satinada" width="180" />
-          <h3>Blusa Satinada Premium</h3>
-          <p>$15.00</p>
-          <button>Comprar</button>
-        </article>
-        <article>
-          <img src="../img/productos/chaqueta.png" alt="Chaqueta Denim" width="180" />
-          <h3>Chaqueta Denim Urbana</h3>
-          <p>$20.00</p>
-          <button>Comprar</button>
-        </article>
+
+        <!-- Producto 1 -->
+        <div class="card card-producto">
+          <img src="../img/productos/vestidofloral.png" class="card-img-top" alt="Vestido Floral" />
+          <div class="card-body">
+            <h3 class="card-title">Vestido Elegante Floral</h3>
+            <p class="card-text precio">$49.99</p>
+            <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modal1">Comprar</button>
+          </div>
+        </div>
+        <!-- Modal 1 -->
+        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-producto-content">
+              <div class="modal-header modal-producto-header">
+                <h5 class="modal-title" id="modal1Label">Vestido Elegante Floral</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body modal-producto-body">
+                <img src="../img/productos/vestidofloral.png" alt="Vestido Floral" />
+                <p>Vestido de corte elegante con estampado floral. Ideal para ocasiones especiales.</p>
+                <div class="modal-meta">
+                  <span class="modal-precio">$49.99</span>
+                  <span class="modal-stock">Stock: 20 unidades</span>
+                </div>
+              </div>
+              <div class="modal-footer modal-producto-footer">
+                <button type="button" class="btn-modal-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                <a href="https://wa.me/593996494273?text=Hola,%20me%20interesa:%20Vestido%20Elegante%20Floral%20-%20%2449.99" target="_blank" class="btn-modal-whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="card card-producto">
+          <img src="../img/productos/blusacasual.png" class="card-img-top" alt="Blusa Blanca" />
+          <div class="card-body">
+            <h3 class="card-title">Blusa Casual Blanca</h3>
+            <p class="card-text precio">$22.00</p>
+            <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modal2">Comprar</button>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-producto-content">
+              <div class="modal-header modal-producto-header">
+                <h5 class="modal-title" id="modal2Label">Blusa Casual Blanca</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body modal-producto-body">
+                <img src="../img/productos/blusacasual.png" alt="Blusa Blanca" />
+                <p>Blusa casual de color blanco, cómoda y versátil para el día a día.</p>
+                <div class="modal-meta">
+                  <span class="modal-precio">$22.00</span>
+                  <span class="modal-stock">Stock: 35 unidades</span>
+                </div>
+              </div>
+              <div class="modal-footer modal-producto-footer">
+                <button type="button" class="btn-modal-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                <a href="https://wa.me/593996494273?text=Hola,%20me%20interesa:%20Blusa%20Casual%20Blanca%20-%20%2422.00" target="_blank" class="btn-modal-whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="card card-producto">
+          <img src="../img/productos/vestidofiesta.png" class="card-img-top" alt="Vestido de Fiesta" />
+          <div class="card-body">
+            <h3 class="card-title">Vestido Largo de Fiesta</h3>
+            <p class="card-text precio">$45.00</p>
+            <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modal3">Comprar</button>
+          </div>
+        </div>
+        <!-- Modal 3 -->
+        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-producto-content">
+              <div class="modal-header modal-producto-header">
+                <h5 class="modal-title" id="modal3Label">Vestido Largo de Fiesta</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body modal-producto-body">
+                <img src="../img/productos/vestidofiesta.png" alt="Vestido de Fiesta" />
+                <p>Vestido largo elegante, perfecto para eventos y celebraciones nocturnas.</p>
+                <div class="modal-meta">
+                  <span class="modal-precio">$45.00</span>
+                  <span class="modal-stock">Stock: 12 unidades</span>
+                </div>
+              </div>
+              <div class="modal-footer modal-producto-footer">
+                <button type="button" class="btn-modal-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                <a href="https://wa.me/593996494273?text=Hola,%20me%20interesa:%20Vestido%20Largo%20de%20Fiesta%20-%20%2445.00" target="_blank" class="btn-modal-whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="card card-producto">
+          <img src="../img/productos/blusamoderna.png" class="card-img-top" alt="Blusa Oversize" />
+          <div class="card-body">
+            <h3 class="card-title">Blusa Oversize Moderna</h3>
+            <p class="card-text precio">$18.00</p>
+            <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modal4">Comprar</button>
+          </div>
+        </div>
+        <!-- Modal 4 -->
+        <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-producto-content">
+              <div class="modal-header modal-producto-header">
+                <h5 class="modal-title" id="modal4Label">Blusa Oversize Moderna</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body modal-producto-body">
+                <img src="../img/productos/blusamoderna.png" alt="Blusa Oversize" />
+                <p>Blusa de corte oversize con diseño moderno, tendencia actual en moda urbana.</p>
+                <div class="modal-meta">
+                  <span class="modal-precio">$18.00</span>
+                  <span class="modal-stock">Stock: 28 unidades</span>
+                </div>
+              </div>
+              <div class="modal-footer modal-producto-footer">
+                <button type="button" class="btn-modal-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                <a href="https://wa.me/593996494273?text=Hola,%20me%20interesa:%20Blusa%20Oversize%20Moderna%20-%20%2418.00" target="_blank" class="btn-modal-whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="card card-producto">
+          <img src="../img/productos/faldaplisada.png" class="card-img-top" alt="Falda Beige" />
+          <div class="card-body">
+            <h3 class="card-title">Falda Plisada Beige</h3>
+            <p class="card-text precio">$25.00</p>
+            <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modal5">Comprar</button>
+          </div>
+        </div>
+        <!-- Modal 5 -->
+        <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modal5Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-producto-content">
+              <div class="modal-header modal-producto-header">
+                <h5 class="modal-title" id="modal5Label">Falda Plisada Beige</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body modal-producto-body">
+                <img src="../img/productos/faldaplisada.png" alt="Falda Beige" />
+                <p>Falda plisada en tono beige, elegante y fácil de combinar con cualquier top.</p>
+                <div class="modal-meta">
+                  <span class="modal-precio">$25.00</span>
+                  <span class="modal-stock">Stock: 18 unidades</span>
+                </div>
+              </div>
+              <div class="modal-footer modal-producto-footer">
+                <button type="button" class="btn-modal-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                <a href="https://wa.me/593996494273?text=Hola,%20me%20interesa:%20Falda%20Plisada%20Beige%20-%20%2425.00" target="_blank" class="btn-modal-whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="card card-producto">
+          <img src="../img/productos/vestidoprimavera.png" class="card-img-top" alt="Vestido Primavera" />
+          <div class="card-body">
+            <h3 class="card-title">Vestido Casual Primavera</h3>
+            <p class="card-text precio">$32.49</p>
+            <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modal6">Comprar</button>
+          </div>
+        </div>
+        <!-- Modal 6 -->
+        <div class="modal fade" id="modal6" tabindex="-1" aria-labelledby="modal6Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-producto-content">
+              <div class="modal-header modal-producto-header">
+                <h5 class="modal-title" id="modal6Label">Vestido Casual Primavera</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body modal-producto-body">
+                <img src="../img/productos/vestidoprimavera.png" alt="Vestido Primavera" />
+                <p>Vestido fresco y colorido, ideal para la temporada de primavera y verano.</p>
+                <div class="modal-meta">
+                  <span class="modal-precio">$32.49</span>
+                  <span class="modal-stock">Stock: 25 unidades</span>
+                </div>
+              </div>
+              <div class="modal-footer modal-producto-footer">
+                <button type="button" class="btn-modal-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                <a href="https://wa.me/593996494273?text=Hola,%20me%20interesa:%20Vestido%20Casual%20Primavera%20-%20%2432.49" target="_blank" class="btn-modal-whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="card card-producto">
+          <img src="../img/productos/blusasatinada.png" class="card-img-top" alt="Blusa Satinada" />
+          <div class="card-body">
+            <h3 class="card-title">Blusa Satinada Premium</h3>
+            <p class="card-text precio">$15.00</p>
+            <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modal7">Comprar</button>
+          </div>
+        </div>
+        <!-- Modal 7 -->
+        <div class="modal fade" id="modal7" tabindex="-1" aria-labelledby="modal7Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-producto-content">
+              <div class="modal-header modal-producto-header">
+                <h5 class="modal-title" id="modal7Label">Blusa Satinada Premium</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body modal-producto-body">
+                <img src="../img/productos/blusasatinada.png" alt="Blusa Satinada" />
+                <p>Blusa de tela satinada con acabado premium, elegante para reuniones y eventos.</p>
+                <div class="modal-meta">
+                  <span class="modal-precio">$15.00</span>
+                  <span class="modal-stock">Stock: 15 unidades</span>
+                </div>
+              </div>
+              <div class="modal-footer modal-producto-footer">
+                <button type="button" class="btn-modal-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                <a href="https://wa.me/593996494273?text=Hola,%20me%20interesa:%20Blusa%20Satinada%20Premium%20-%20%2415.00" target="_blank" class="btn-modal-whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="card card-producto">
+          <img src="../img/productos/chaqueta.png" class="card-img-top" alt="Chaqueta Denim" />
+          <div class="card-body">
+            <h3 class="card-title">Chaqueta Denim Urbana</h3>
+            <p class="card-text precio">$20.00</p>
+            <button class="btn-comprar" data-bs-toggle="modal" data-bs-target="#modal8">Comprar</button>
+          </div>
+        </div>
+        <!-- Modal 8 -->
+        <div class="modal fade" id="modal8" tabindex="-1" aria-labelledby="modal8Label" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-producto-content">
+              <div class="modal-header modal-producto-header">
+                <h5 class="modal-title" id="modal8Label">Chaqueta Denim Urbana</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+              </div>
+              <div class="modal-body modal-producto-body">
+                <img src="../img/productos/chaqueta.png" alt="Chaqueta Denim" />
+                <p>Chaqueta de mezclilla con estilo urbano, resistente y muy versátil.</p>
+                <div class="modal-meta">
+                  <span class="modal-precio">$20.00</span>
+                  <span class="modal-stock">Stock: 10 unidades</span>
+                </div>
+              </div>
+              <div class="modal-footer modal-producto-footer">
+                <button type="button" class="btn-modal-cerrar" data-bs-dismiss="modal">Cerrar</button>
+                <a href="https://wa.me/593996494273?text=Hola,%20me%20interesa:%20Chaqueta%20Denim%20Urbana%20-%20%2420.00" target="_blank" class="btn-modal-whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </section>
+      <!-- PLACEHOLDER BOOTSTRAP: card de carga simulada -->
+      <section class="seccion-placeholder">
+        <p class="placeholder-label">Cargando más productos...</p>
+        <div class="card card-placeholder" aria-hidden="true">
+          <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+              <span class="placeholder col-6"></span>
+            </h5>
+            <p class="card-text placeholder-glow">
+              <span class="placeholder col-7"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-4"></span>
+              <span class="placeholder col-6"></span>
+              <span class="placeholder col-8"></span>
+            </p>
+            <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+          </div>
+        </div>
+      </section>
+
 
     </main>
 
-    <!-- Pie de página -->
     <footer>
       <p>© 2024 Tu Catálogo Aquí. Todos los derechos reservados.</p>
       <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Instagram</a></p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>

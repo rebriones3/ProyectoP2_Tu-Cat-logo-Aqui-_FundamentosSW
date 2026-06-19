@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+
+  <producto>
+    <id>1</id>
+    <nombre>Vestido Elegante Floral</nombre>
+    <descripcion>Vestido de corte elegante con estampado floral. Ideal para ocasiones especiales.</descripcion>
+    <precio>49.99</precio>
+    <stock>20</stock>
+    <calidad>80</calidad>
+    <imagen>img/productos/vestidofloral.png</imagen>
+  </producto>
+
+  <producto>
+    <id>2</id>
+    <nombre>Blusa Casual Blanca</nombre>
+    <descripcion>Blusa casual de color blanco, cómoda y versátil para el día a día.</descripcion>
+    <precio>22.00</precio>
+    <stock>35</stock>
+    <calidad>60</calidad>
+    <imagen>img/productos/blusacasual.png</imagen>
+  </producto>
+
+  <producto>
+    <id>3</id>
+    <nombre>Vestido Largo de Fiesta</nombre>
+    <descripcion>Vestido largo elegante, perfecto para eventos y celebraciones nocturnas.</descripcion>
+    <precio>45.00</precio>
+    <stock>12</stock>
+    <calidad>70</calidad>
+    <imagen>img/productos/vestidofiesta.png</imagen>
+  </producto>
+
+  <producto>
+    <id>4</id>
+    <nombre>Blusa Oversize Moderna</nombre>
+    <descripcion>Blusa de corte oversize con diseño moderno, tendencia actual en moda urbana.</descripcion>
+    <precio>18.00</precio>
+    <stock>28</stock>
+    <calidad>50</calidad>
+    <imagen>img/productos/blusamoderna.png</imagen>
+  </producto>
+
+  <producto>
+    <id>5</id>
+    <nombre>Falda Plisada Beige</nombre>
+    <descripcion>Falda plisada en tono beige, elegante y fácil de combinar con cualquier top.</descripcion>
+    <precio>25.00</precio>
+    <stock>18</stock>
+    <calidad>60</calidad>
+    <imagen>img/productos/faldaplisada.png</imagen>
+  </producto>
+
+  <producto>
+    <id>6</id>
+    <nombre>Vestido Casual Primavera</nombre>
+    <descripcion>Vestido fresco y colorido, ideal para la temporada de primavera y verano.</descripcion>
+    <precio>32.49</precio>
+    <stock>25</stock>
+    <calidad>80</calidad>
+    <imagen>img/productos/vestidoprimavera.png</imagen>
+  </producto>
+
+  <producto>
+    <id>7</id>
+    <nombre>Blusa Satinada Premium</nombre>
+    <descripcion>Blusa de tela satinada con acabado premium, elegante para reuniones y eventos.</descripcion>
+    <precio>15.00</precio>
+    <stock>15</stock>
+    <calidad>90</calidad>
+    <imagen>img/productos/blusasatinada.png</imagen>
+  </producto>
+
+  <producto>
+    <id>8</id>
+    <nombre>Chaqueta Denim Urbana</nombre>
+    <descripcion>Chaqueta de mezclilla con estilo urbano, resistente y muy versátil.</descripcion>
+    <precio>20.00</precio>
+    <stock>10</stock>
+    <calidad>70</calidad>
+    <imagen>img/productos/chaqueta.png</imagen>
+  </producto>
+
+</productos>

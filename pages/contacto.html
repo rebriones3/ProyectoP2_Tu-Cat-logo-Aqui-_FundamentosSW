@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="es">
-
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../img/logos/LOGO-removebg-preview.png" type="image/png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/contacto.css" />
     <title>Contacto</title>
@@ -13,35 +13,78 @@
 
   <body>
 
-    <!-- Encabezado con logo y menú de navegación -->
-    <header>
-      <figure>
-        <img src="../img/logos/logo.png" alt="logo" width="60" />
-      </figure>
-      <div class="header-text">
-        <h4>Tu Catálogo Aquí</h4>
-        <p>Tu tienda digital en un solo enlace</p>
+    <!-- NAVBAR BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <figure>
+            <img src="../img/logos/logo.png" alt="logo" width="40" />
+          </figure>
+          <div class="navbar-brand-text">
+            <h4>Tu Catálogo Aquí</h4>
+            <p>Tu tienda digital en un solo enlace</p>
+          </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuMovilContacto" aria-controls="menuMovilContacto" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav gap-1">
+            <li class="nav-item"><a class="nav-link" href="../index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="catalogo.html"><i class="fa-solid fa-cart-shopping"></i> Catálogo</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user"></i> Admin
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</a></li>
+                <li><a class="dropdown-item" href="registrarse.html"><i class="fa-solid fa-user-plus"></i> Registrarse</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link active" href="#"><i class="fa-solid fa-phone"></i> Contacto</a></li>
+          </ul>
+        </div>
       </div>
-      <nav class="nav-links">
-        <a href="../index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-        <a href="catalogo.html"><i class="fa-solid fa-cart-shopping"></i> Catálogo</a>
-        <a href="login.html"><i class="fa-solid fa-user"></i> Admin</a>
-        <a href="#"><i class="fa-solid fa-phone"></i> Contacto</a>
-      </nav>
-    </header>
+    </nav>
+
+    <!-- OFFCANVAS móvil -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="menuMovilContacto" aria-labelledby="menuMovilContactoLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="menuMovilContactoLabel">Tu Catálogo Aquí</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav flex-column gap-1">
+          <li class="nav-item"><a class="nav-link" href="../index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html"><i class="fa-solid fa-cart-shopping"></i> Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa-solid fa-user"></i> Admin</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-phone"></i> Contacto</a></li>
+        </ul>
+      </div>
+    </div>
 
     <main>
 
-      <!-- Sección hero con título de la página -->
+      <!-- Hero contacto -->
       <section id="hero-contacto">
         <h1>Contáctanos</h1>
         <p>¿Tienes preguntas sobre nuestros productos o servicios? Escríbenos y te responderemos lo antes posible.</p>
       </section>
 
-      <!-- Contenido principal: formulario a la izquierda, info a la derecha -->
+      <!-- ALERT BOOTSTRAP: aviso de respuesta rápida -->
+      <div class="alert-contacto">
+        <div class="alert alert-primary" role="alert">
+          <i class="fa-solid fa-circle-info"></i>
+          Nuestro equipo responde en menos de 24 horas. También puedes escribirnos por
+          <a href="https://wa.me/593996494273" class="alert-link" target="_blank">WhatsApp</a>.
+        </div>
+      </div>
+
       <div class="contenido-contacto">
 
-        <!-- Columna izquierda: formulario y preguntas frecuentes -->
+        <!-- Columna izquierda -->
         <div class="columna-formulario">
 
           <!-- Formulario de contacto -->
@@ -68,7 +111,6 @@
               <label for="mensaje">Mensaje</label>
               <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escriba su mensaje..."></textarea>
 
-              <!-- Casilla de aceptación de términos -->
               <div class="terminos">
                 <input id="terminos" name="terminos" type="checkbox" required />
                 <label for="terminos">Acepto los términos y condiciones</label>
@@ -78,28 +120,52 @@
             </form>
           </section>
 
-          <!-- Preguntas frecuentes -->
+          <!-- ACCORDION BOOTSTRAP: reemplaza <details> de preguntas frecuentes -->
           <section id="preguntas-frecuentes">
             <h3>Preguntas frecuentes</h3>
-            <details>
-              <summary>¿Cuánto tiempo tarda en responder el equipo de soporte?</summary>
-              <p>Normalmente respondemos dentro de las 24 horas hábiles.</p>
-            </details>
-            <hr />
-            <details>
-              <summary>¿Puedo solicitar una devolución?</summary>
-              <p>Sí, ofrecemos devoluciones dentro de los 30 días posteriores a la compra.</p>
-            </details>
-            <hr />
-            <details>
-              <summary>¿Cómo puedo actualizar mi información de contacto?</summary>
-              <p>Puedes actualizar tu información de contacto en tu perfil de usuario o contactándonos directamente.</p>
-            </details>
+            <div class="accordion" id="accordionFaq">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                    ¿Cuánto tiempo tarda en responder el equipo de soporte?
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body">
+                    Normalmente respondemos dentro de las 24 horas hábiles.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                    ¿Puedo solicitar una devolución?
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body">
+                    Sí, ofrecemos devoluciones dentro de los 30 días posteriores a la compra.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                    ¿Cómo puedo actualizar mi información de contacto?
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+                  <div class="accordion-body">
+                    Puedes actualizar tu información en tu perfil de usuario o contactándonos directamente.
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
 
         </div>
 
-        <!-- Columna derecha: información de contacto -->
+        <!-- Columna derecha: info de contacto -->
         <aside class="info-contacto">
           <h3>Información de contacto</h3>
           <p><i class="fa-solid fa-location-dot"></i> Santo Domingo de los Tsáchilas, Ecuador</p>
@@ -123,17 +189,28 @@
             <i class="fa-solid fa-map"></i>
             <a href="https://www.google.com/maps/@-0.3735552,-78.4171008,12z" target="_blank">Google Maps</a>
           </p>
+
+          <!-- LIST GROUP BOOTSTRAP: canales rápidos -->
+          <div class="lista-canales">
+            <h4>Canales de atención</h4>
+            <ul class="list-group">
+              <li class="list-group-item"><i class="fa-brands fa-whatsapp"></i> WhatsApp</li>
+              <li class="list-group-item"><i class="fa-solid fa-envelope"></i> Correo electrónico</li>
+              <li class="list-group-item"><i class="fa-brands fa-facebook"></i> Facebook</li>
+              <li class="list-group-item"><i class="fa-brands fa-instagram"></i> Instagram</li>
+            </ul>
+          </div>
         </aside>
 
       </div>
 
     </main>
 
-    <!-- Pie de página -->
     <footer>
       <p>© 2024 Tu Catálogo Aquí. Todos los derechos reservados.</p>
       <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Instagram</a></p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>

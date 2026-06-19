@@ -1,0 +1,232 @@
+/* ============================================================
+   BLOQUE 1: FONDO Y LAYOUT
+   Compartido por login.html y registrarse.html
+   ============================================================ */
+
+body {
+  background: linear-gradient(135deg, #3153c8 0%, #3c82f6 55%, #1ba5e8 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 16px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ============================================================
+   BLOQUE 2: TARJETA (Card Bootstrap)
+   .tarjeta-login  → max-width 440px
+   .tarjeta-registro → max-width 480px (más campos)
+   ============================================================ */
+
+.tarjeta-login,
+.tarjeta-registro {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 24px !important;
+  border: none !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18) !important;
+  text-align: center;
+}
+
+.tarjeta-login    { max-width: 440px; }
+.tarjeta-registro { max-width: 480px; }
+
+.tarjeta-login .card-body,
+.tarjeta-registro .card-body {
+  padding: 48px 44px;
+}
+
+/* ============================================================
+   BLOQUE 3: LOGO Y ENCABEZADO
+   ============================================================ */
+
+.tarjeta-login figure,
+.tarjeta-registro figure {
+  margin: 0 auto 20px;
+}
+
+.tarjeta-login img,
+.tarjeta-registro img {
+  border: 3px solid #eef3ff;
+}
+
+.tarjeta-login img    { border-radius: 16px; }
+.tarjeta-registro img { border-radius: 50%; }
+
+.tarjeta-login h1,
+.tarjeta-registro h1 {
+  font-size: 26px;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.tarjeta-login > .card-body > p,
+.tarjeta-registro > .card-body > p {
+  color: #60708d;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+
+/* ============================================================
+   BLOQUE 4: CAMPOS DEL FORMULARIO
+   ============================================================ */
+
+.tarjeta-login form,
+.tarjeta-registro form {
+  text-align: left;
+}
+
+.tarjeta-login label,
+.tarjeta-registro label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.tarjeta-login input[type="email"],
+.tarjeta-login input[type="password"],
+.tarjeta-registro input[type="text"],
+.tarjeta-registro input[type="email"],
+.tarjeta-registro input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #dde4ff;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #f7f9ff;
+  margin-bottom: 18px;
+  box-sizing: border-box;
+}
+
+.tarjeta-login input:focus,
+.tarjeta-registro input:focus {
+  border-color: #3c82f6;
+  background: white;
+  outline: none;
+}
+
+/* Checkbox "Recordarme" (solo login) */
+.recordar-sesion {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.recordar-sesion input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  accent-color: #2846b8;
+}
+
+.recordar-sesion label {
+  font-size: 13px;
+  color: #60708d;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ============================================================
+   BLOQUE 5: BOTÓN DE ENVÍO
+   ============================================================ */
+
+.tarjeta-login button[type="submit"],
+.tarjeta-registro button[type="submit"] {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, #2846b8, #3c82f6);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.tarjeta-login button[type="submit"]:hover,
+.tarjeta-registro button[type="submit"]:hover {
+  background: linear-gradient(135deg, #1d37a0, #2f72e8);
+}
+
+/* ============================================================
+   BLOQUE 6: ENLACES INFERIORES
+   ============================================================ */
+
+.tarjeta-login hr,
+.tarjeta-registro hr {
+  margin: 24px 0 16px;
+  border-color: #eef1ff;
+}
+
+.enlace-registro,
+.enlace-login {
+  font-size: 13px;
+  color: #60708d;
+  text-align: center;
+}
+
+.enlace-registro a,
+.enlace-login a {
+  color: #2846b8;
+  font-weight: 600;
+  margin: 0 2px;
+}
+
+.enlace-registro a:hover,
+.enlace-login a:hover {
+  text-decoration: underline;
+}
+
+/* Volver al inicio (solo login) */
+.volver-inicio {
+  text-align: center;
+  margin-top: 14px;
+}
+
+.volver-inicio a {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.volver-inicio a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   BLOQUE 7: RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 480px) {
+  body {
+    padding: 16px 12px;
+  }
+
+  .tarjeta-login,
+  .tarjeta-registro {
+    border-radius: 18px !important;
+  }
+
+  .tarjeta-login .card-body,
+  .tarjeta-registro .card-body {
+    padding: 32px 20px;
+  }
+
+  .tarjeta-login h1,
+  .tarjeta-registro h1 {
+    font-size: 22px;
+  }
+}

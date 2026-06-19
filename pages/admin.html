@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="es">
-
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../img/logos/LOGO-removebg-preview.png" type="image/png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/admin.css" />
     <title>Dashboard</title>
@@ -13,177 +13,247 @@
 
   <body>
 
-    <!-- Encabezado del panel de administración -->
-    <header class="admin-header">
-      <figure>
-        <img src="../img/logos/logo.png" alt="logo" width="60" />
-      </figure>
-      <div class="admin-header-info">
-        <h4>Tu Catálogo Aquí</h4>
-        <p>Tu tienda digital en un solo enlace</p>
-      </div>
-      <nav class="admin-nav">
-        <a href="catalogo.html" title="Catálogo Demo">
-          <i class="fa-solid fa-cart-shopping"></i> Catálogo
+    <!-- NAVBAR BOOTSTRAP (header admin) -->
+    <nav class="navbar sticky-top admin-header">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <figure>
+            <img src="../img/logos/logo.png" alt="logo" width="50" />
+          </figure>
+          <div class="navbar-brand-text">
+            <h4>Tu Catálogo Aquí</h4>
+            <p>Tu tienda digital en un solo enlace</p>
+          </div>
         </a>
-        <a href="../index.html" title="Cerrar Sesión" class="btn-logout">
-          <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión
-        </a>
-      </nav>
-    </header>
 
-    <!-- Título del dashboard -->
-      <section id="hero-dashboard">
-        <h1>Dashboard</h1>
-        <p>Resumen de tu negocio</p>
-      </section>
+        <div class="admin-nav">
+          <a href="catalogo.html" class="nav-link-admin" title="Catálogo Demo">
+            <i class="fa-solid fa-cart-shopping"></i> Catálogo
+            <span class="badge rounded-pill bg-danger ms-1">Nuevo</span>
+          </a>
+          <a href="../index.html" class="nav-link-admin btn-logout" title="Cerrar Sesión">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero dashboard -->
+    <section id="hero-dashboard">
+      <h1>Dashboard</h1>
+      <p>Resumen de tu negocio</p>
+    </section>
 
     <main class="dashboard">
 
-      <!-- Tarjetas con estadísticas del negocio -->
+      <!-- CARDS: estadísticas -->
       <div class="stats-grid">
-        <div class="stat-card">
-          <h3>Productos totales</h3>
-          <p>8</p>
+        <div class="card stat-card">
+          <div class="card-body">
+            <h3 class="card-subtitle">Productos totales</h3>
+            <p class="card-text stat-num">8</p>
+          </div>
         </div>
-        <div class="stat-card">
-          <h3>Unidades en stock</h3>
-          <p>235</p>
+        <div class="card stat-card">
+          <div class="card-body">
+            <h3 class="card-subtitle">Unidades en stock</h3>
+            <p class="card-text stat-num">235</p>
+          </div>
         </div>
-        <div class="stat-card">
-          <h3>Productos destacados</h3>
-          <p>4</p>
+        <div class="card stat-card">
+          <div class="card-body">
+            <h3 class="card-subtitle">Productos destacados</h3>
+            <p class="card-text stat-num">4</p>
+          </div>
         </div>
-        <div class="stat-card">
-          <h3>Valor del inventario</h3>
-          <p>$15,028</p>
+        <div class="card stat-card">
+          <div class="card-body">
+            <h3 class="card-subtitle">Valor del inventario</h3>
+            <p class="card-text stat-num">$15,028</p>
+          </div>
         </div>
       </div>
 
-      <!-- Botones de acciones rápidas -->
-      <section class="acciones-rapidas">
-        <h2>Acciones rápidas</h2>
-        <div class="acciones-botones">
-          <button title="Gestionar los productos">
-            <i class="fa-solid fa-box"></i> Gestionar Productos
-          </button>
-          <button title="Configura las opciones de tu negocio">
-            <i class="fa-solid fa-gear"></i> Configurar Negocio
-          </button>
-          <button title="Ver tu catálogo público">
-            <i class="fa-solid fa-eye"></i> Ver Mi Catálogo
-          </button>
-          <button title="Comparte tu catálogo con otros">
-            <i class="fa-solid fa-share-nodes"></i> Compartir Mi Catálogo
-          </button>
-        </div>
-      </section>
+      <!-- Layout: scrollspy nav + contenido -->
+      <div class="scrollspy-layout">
 
-      <!-- Tabla con los productos registrados -->
-      <section class="tabla-productos">
-        <h2>Productos recientes</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Producto</th>
-              <th>Precio</th>
-              <th>Stock</th>
-              <th>Imagen</th>
-              <th>Calidad</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Vestido Elegante Floral</td>
-              <td>$49.99</td>
-              <td>20</td>
-              <td><img src="../img/productos/vestidofloral.png" alt="Vestido Floral" width="80" /></td>
-              <td><progress value="80" max="100"></progress><span>80%</span></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Blusa Casual Blanca</td>
-              <td>$22.00</td>
-              <td>35</td>
-              <td><img src="../img/productos/blusacasual.png" alt="Blusa Blanca" width="80" /></td>
-              <td><progress value="60" max="100"></progress><span>60%</span></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Vestido Largo de Fiesta</td>
-              <td>$45.00</td>
-              <td>12</td>
-              <td><img src="../img/productos/vestidofiesta.png" alt="Vestido Largo" width="80" /></td>
-              <td><progress value="70" max="100"></progress><span>70%</span></td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Blusa Oversize Moderna</td>
-              <td>$18.00</td>
-              <td>28</td>
-              <td><img src="../img/productos/blusamoderna.png" alt="Blusa Moderna" width="80" /></td>
-              <td><progress value="50" max="100"></progress><span>50%</span></td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Falda Plisada Beige</td>
-              <td>$25.00</td>
-              <td>18</td>
-              <td><img src="../img/productos/faldaplisada.png" alt="Falda Plisada" width="80" /></td>
-              <td><progress value="60" max="100"></progress><span>60%</span></td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Vestido Casual Primavera</td>
-              <td>$32.49</td>
-              <td>25</td>
-              <td><img src="../img/productos/vestidoprimavera.png" alt="Vestido Casual" width="80" /></td>
-              <td><progress value="80" max="100"></progress><span>80%</span></td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>Blusa Satinada Premium</td>
-              <td>$15.00</td>
-              <td>15</td>
-              <td><img src="../img/productos/blusasatinada.png" alt="Blusa Satinada" width="80" /></td>
-              <td><progress value="90" max="100"></progress><span>90%</span></td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>Chaqueta Denim Urbana</td>
-              <td>$20.00</td>
-              <td>10</td>
-              <td><img src="../img/productos/chaqueta.png" alt="Chaqueta Denim" width="80" /></td>
-              <td><progress value="70" max="100"></progress><span>70%</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+        <!-- Navegación lateral Scrollspy (oculta en móvil) -->
+        <nav id="nav-scrollspy" class="scrollspy-nav d-none d-lg-block">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-action active">
+              <a href="#sec-acciones">Acciones rápidas</a>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <a href="#sec-tabla">Productos recientes</a>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <a href="#sec-metricas">Métricas de ventas</a>
+            </li>
+          </ul>
+        </nav>
 
-      <!-- Barras de métricas de ventas -->
-      <section class="metricas-ventas">
-        <p>Porcentaje de Ventas del Mes</p>
-        <div class="barra-metrica">
-          <progress value="80" max="100"></progress>
-          <span>80%</span>
+        <!-- Contenido principal -->
+        <div data-bs-spy="scroll" data-bs-target="#nav-scrollspy" data-bs-smooth-scroll="true" class="scrollspy-content" tabindex="0">
+
+          <!-- Acciones rápidas -->
+          <section class="acciones-rapidas" id="sec-acciones">
+            <h2>Acciones rápidas</h2>
+            <div class="acciones-botones">
+              <button type="button" title="Gestionar los productos">
+                <i class="fa-solid fa-box"></i> Gestionar Productos
+              </button>
+              <button type="button" title="Configura las opciones de tu negocio">
+                <i class="fa-solid fa-gear"></i> Configurar Negocio
+              </button>
+              <button type="button" title="Ver tu catálogo público">
+                <i class="fa-solid fa-eye"></i> Ver Mi Catálogo
+              </button>
+              <button type="button" class="btn-accion-disabled" disabled title="Próximamente">
+                <i class="fa-solid fa-share-nodes"></i> Compartir (próximamente)
+              </button>
+            </div>
+          </section>
+
+          <!-- Tabla con scroll horizontal en móvil -->
+          <section class="tabla-productos" id="sec-tabla">
+            <h2>Productos recientes</h2>
+            <div class="tabla-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Id</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Imagen</th>
+                    <th>Calidad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Vestido Elegante Floral</td>
+                    <td>$49.99</td>
+                    <td>20</td>
+                    <td><img src="../img/productos/vestidofloral.png" alt="Vestido Floral" width="60" /></td>
+                    <td>
+                      <div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 80%">80%</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Blusa Casual Blanca</td>
+                    <td>$22.00</td>
+                    <td>35</td>
+                    <td><img src="../img/productos/blusacasual.png" alt="Blusa Blanca" width="60" /></td>
+                    <td>
+                      <div class="progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 60%">60%</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Vestido Largo de Fiesta</td>
+                    <td>$45.00</td>
+                    <td>12</td>
+                    <td><img src="../img/productos/vestidofiesta.png" alt="Vestido Largo" width="60" /></td>
+                    <td>
+                      <div class="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 70%">70%</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Blusa Oversize Moderna</td>
+                    <td>$18.00</td>
+                    <td>28</td>
+                    <td><img src="../img/productos/blusamoderna.png" alt="Blusa Moderna" width="60" /></td>
+                    <td>
+                      <div class="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 50%">50%</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Falda Plisada Beige</td>
+                    <td>$25.00</td>
+                    <td>18</td>
+                    <td><img src="../img/productos/faldaplisada.png" alt="Falda Plisada" width="60" /></td>
+                    <td>
+                      <div class="progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 60%">60%</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Vestido Casual Primavera</td>
+                    <td>$32.49</td>
+                    <td>25</td>
+                    <td><img src="../img/productos/vestidoprimavera.png" alt="Vestido Casual" width="60" /></td>
+                    <td>
+                      <div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 80%">80%</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Blusa Satinada Premium</td>
+                    <td>$15.00</td>
+                    <td>15</td>
+                    <td><img src="../img/productos/blusasatinada.png" alt="Blusa Satinada" width="60" /></td>
+                    <td>
+                      <div class="progress" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 90%">90%</div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Chaqueta Denim Urbana</td>
+                    <td>$20.00</td>
+                    <td>10</td>
+                    <td><img src="../img/productos/chaqueta.png" alt="Chaqueta Denim" width="60" /></td>
+                    <td>
+                      <div class="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar" style="width: 70%">70%</div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Métricas de ventas -->
+          <section class="metricas-ventas" id="sec-metricas">
+            <p>Porcentaje de Ventas del Mes</p>
+            <div class="progress mb-2" role="progressbar" aria-label="Ventas del mes" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 80%">80%</div>
+            </div>
+            <hr />
+            <p>Porcentaje de Ventas Fallidas</p>
+            <div class="progress mb-2" role="progressbar" aria-label="Ventas fallidas" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-danger" style="width: 20%">20%</div>
+            </div>
+          </section>
+
         </div>
-        <hr />
-        <p>Porcentaje de Ventas Fallidas</p>
-        <div class="barra-metrica">
-          <meter min="0" max="100" value="20" title="20% de las ventas fueron fallidas"></meter>
-          <span>20%</span>
-        </div>
-      </section>
+      </div>
 
     </main>
 
-    <!-- Pie de página -->
     <footer>
       <p>© 2024 Tu Catálogo Aquí. Todos los derechos reservados.</p>
       <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Instagram</a></p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>

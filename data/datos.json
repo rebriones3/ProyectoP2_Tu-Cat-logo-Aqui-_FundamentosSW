@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "nombre": "Vestido Elegante Floral",
+    "descripcion": "Vestido de corte elegante con estampado floral. Ideal para ocasiones especiales.",
+    "precio": 49.99,
+    "stock": 20,
+    "calidad": 80,
+    "imagen": "img/productos/vestidofloral.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Blusa Casual Blanca",
+    "descripcion": "Blusa casual de color blanco, cómoda y versátil para el día a día.",
+    "precio": 22.00,
+    "stock": 35,
+    "calidad": 60,
+    "imagen": "img/productos/blusacasual.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Vestido Largo de Fiesta",
+    "descripcion": "Vestido largo elegante, perfecto para eventos y celebraciones nocturnas.",
+    "precio": 45.00,
+    "stock": 12,
+    "calidad": 70,
+    "imagen": "img/productos/vestidofiesta.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Blusa Oversize Moderna",
+    "descripcion": "Blusa de corte oversize con diseño moderno, tendencia actual en moda urbana.",
+    "precio": 18.00,
+    "stock": 28,
+    "calidad": 50,
+    "imagen": "img/productos/blusamoderna.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Falda Plisada Beige",
+    "descripcion": "Falda plisada en tono beige, elegante y fácil de combinar con cualquier top.",
+    "precio": 25.00,
+    "stock": 18,
+    "calidad": 60,
+    "imagen": "img/productos/faldaplisada.png"
+  },
+  {
+    "id": 6,
+    "nombre": "Vestido Casual Primavera",
+    "descripcion": "Vestido fresco y colorido, ideal para la temporada de primavera y verano.",
+    "precio": 32.49,
+    "stock": 25,
+    "calidad": 80,
+    "imagen": "img/productos/vestidoprimavera.png"
+  },
+  {
+    "id": 7,
+    "nombre": "Blusa Satinada Premium",
+    "descripcion": "Blusa de tela satinada con acabado premium, elegante para reuniones y eventos.",
+    "precio": 15.00,
+    "stock": 15,
+    "calidad": 90,
+    "imagen": "img/productos/blusasatinada.png"
+  },
+  {
+    "id": 8,
+    "nombre": "Chaqueta Denim Urbana",
+    "descripcion": "Chaqueta de mezclilla con estilo urbano, resistente y muy versátil.",
+    "precio": 20.00,
+    "stock": 10,
+    "calidad": 70,
+    "imagen": "img/productos/chaqueta.png"
+  }
+]

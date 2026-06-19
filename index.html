@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="es">
-
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/logos/LOGO-removebg-preview.png" type="image/png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/index.css" />
     <title>Tu Catálogo Aquí</title>
@@ -13,24 +13,79 @@
 
   <body>
 
-    <!-- Encabezado con logo y menú de navegación -->
-    <header>
-      <figure>
-        <img src="img/logos/logo.png" alt="logo" width="40" />
-      </figure>
-      <div class="header-text">
-        <h4>Tu Catálogo Aquí</h4>
-        <p>Tu tienda digital en un solo enlace</p>
-      </div>
-      <nav class="nav-links">
-        <a href="#"><i class="fa-solid fa-house"></i> Inicio</a>
-        <a href="pages/catalogo.html"><i class="fa-solid fa-cart-shopping"></i> Catálogo</a>
-        <a href="pages/login.html"><i class="fa-solid fa-user"></i> Admin</a>
-        <a href="pages/contacto.html"><i class="fa-solid fa-phone"></i> Contacto</a>
-      </nav>
-    </header>
+    <!-- NAVBAR BOOTSTRAP (reemplaza header personalizado) -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid">
 
-    <!-- Sección principal con título, descripción y botones de acción -->
+        <!-- Brand: logo + texto -->
+        <a class="navbar-brand" href="#">
+          <figure>
+            <img src="img/logos/logo.png" alt="logo" width="40" />
+          </figure>
+          <div class="navbar-brand-text">
+            <h4>Tu Catálogo Aquí</h4>
+            <p>Tu tienda digital en un solo enlace</p>
+          </div>
+        </a>
+
+        <!-- Botón hamburguesa para móvil (abre offcanvas) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuMovil" aria-controls="menuMovil" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav escritorio -->
+        <div class="collapse navbar-collapse justify-content-end">
+          <ul class="navbar-nav gap-1">
+            <li class="nav-item">
+              <a class="nav-link active" href="#"><i class="fa-solid fa-house"></i> Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/catalogo.html"><i class="fa-solid fa-cart-shopping"></i> Catálogo</a>
+            </li>
+            <!-- Dropdown Admin -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user"></i> Admin
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="pages/login.html"><i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión</a></li>
+                <li><a class="dropdown-item" href="pages/registrarse.html"><i class="fa-solid fa-user-plus"></i> Registrarse</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/contacto.html"><i class="fa-solid fa-phone"></i> Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- OFFCANVAS: menú lateral para móvil -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="menuMovil" aria-labelledby="menuMovilLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="menuMovilLabel">Tu Catálogo Aquí</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav flex-column gap-1">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-solid fa-house"></i> Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/catalogo.html"><i class="fa-solid fa-cart-shopping"></i> Catálogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/login.html"><i class="fa-solid fa-user"></i> Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/contacto.html"><i class="fa-solid fa-phone"></i> Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Sección hero -->
     <section id="hero">
       <figure>
         <img src="img/logos/logo.png" alt="logo" width="80" />
@@ -38,42 +93,46 @@
       <h1>Tu Catálogo Aquí</h1>
       <h2>Tu tienda digital en un solo enlace</h2>
       <p>
-        Olvídate del desorden en redes sociales. Crea tu catálogo digital profesional <br />
+        Olvídate del desorden en redes sociales. Crea tu catálogo digital
+        profesional <br />
         para tecnología, belleza, accesorios y más. Vende directamente por WhatsApp.
       </p>
 
-      <!-- Botones principales -->
       <div class="cta-botones">
         <a href="pages/catalogo.html" class="btn-principal">
-          Ver Catálogo Demo
-          <i class="fa-solid fa-arrow-right"></i>
+          Ver Catálogo Demo <i class="fa-solid fa-arrow-right"></i>
         </a>
         <a href="pages/login.html" class="btn-secundario">
-          <i class="fa-solid fa-box"></i>
-          Haz un Catálogo
+          <i class="fa-solid fa-box"></i> Haz un Catálogo
         </a>
       </div>
 
-      <!-- Tarjetas con estadísticas destacadas -->
+      <!-- CARDS BOOTSTRAP: estadísticas del hero -->
       <div class="cards-estadisticas">
-        <article class="card">
-          <h2>100+</h2>
-          <p>Productos disponibles</p>
-        </article>
-        <article class="card">
-          <h2>24/7</h2>
-          <p>Atención al cliente</p>
-        </article>
-        <article class="card">
-          <h2>5.0</h2>
-          <p><i class="fa-solid fa-star"></i> Calificación</p>
-        </article>
+        <div class="card card-stat">
+          <div class="card-body">
+            <h2 class="card-title">100+</h2>
+            <p class="card-text">Productos disponibles</p>
+          </div>
+        </div>
+        <div class="card card-stat">
+          <div class="card-body">
+            <h2 class="card-title">24/7</h2>
+            <p class="card-text">Atención al cliente</p>
+          </div>
+        </div>
+        <div class="card card-stat">
+          <div class="card-body">
+            <h2 class="card-title">5.0</h2>
+            <p class="card-text"><i class="fa-solid fa-star"></i> Calificación</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <main>
 
-      <!-- Sección de beneficios del servicio -->
+      <!-- Sección beneficios -->
       <section id="beneficios">
         <div class="beneficios-header">
           <span>Innovación que transforma</span>
@@ -82,85 +141,150 @@
           <p><strong>Sin complicaciones. Solo resultados.</strong></p>
         </div>
 
-        <!-- Tarjetas de beneficios principales -->
         <div class="beneficios-grid">
-          <article class="card-principal">
-            <div class="icono">
-              <i class="fa-solid fa-cube"></i>
+
+          <!-- CARD BOOTSTRAP: beneficio principal -->
+          <div class="card card-principal">
+            <div class="card-body text-start">
+              <div class="icono">
+                <i class="fa-solid fa-cube"></i>
+              </div>
+              <h3 class="card-title">Catálogo Inteligente</h3>
+              <p class="card-text">
+                Tu inventario completo en un solo enlace. Organización automática
+                por categorías con búsqueda instantánea.
+              </p>
+              <ul>
+                <li>Actualización en tiempo real</li>
+                <li>Control de stock automático</li>
+                <li>Sin límite de productos</li>
+              </ul>
             </div>
-            <h3>Catálogo Inteligente</h3>
-            <p>Tu inventario completo en un solo enlace. Organización automática por categorías con búsqueda instantánea.</p>
-            <ul>
-              <li>Actualización en tiempo real</li>
-              <li>Control de stock automático</li>
-              <li>Sin límite de productos</li>
-            </ul>
-          </article>
+          </div>
 
           <div class="cards-secundarias">
-            <article class="card-secundaria">
-              <div class="icono whatsapp">
-                <i class="fa-brands fa-whatsapp"></i>
+            <!-- CARD BOOTSTRAP: WhatsApp -->
+            <div class="card card-secundaria">
+              <div class="card-body text-start">
+                <div class="icono whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <h3 class="card-title">WhatsApp Integrado</h3>
+                <p class="card-text">Conecta directamente con tus clientes y recibe pedidos al instante.</p>
               </div>
-              <h3>WhatsApp Integrado</h3>
-              <p>Conecta directamente con tus clientes y recibe pedidos al instante.</p>
-            </article>
+            </div>
 
-            <article class="card-secundaria">
-              <div class="icono analytics">
-                <i class="fa-solid fa-chart-line"></i>
+            <!-- CARD BOOTSTRAP: Analytics -->
+            <div class="card card-secundaria">
+              <div class="card-body text-start">
+                <div class="icono analytics">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3 class="card-title">Analytics en Vivo</h3>
+                <p class="card-text">Métricas de ventas y productos más vistos en tiempo real.</p>
               </div>
-              <h3>Analytics en Vivo</h3>
-              <p>Métricas de ventas y productos más vistos en tiempo real.</p>
-            </article>
+            </div>
           </div>
         </div>
 
-        <!-- Tarjetas de características adicionales -->
+        <!-- CARDS BOOTSTRAP: extras -->
         <div class="beneficios-extra">
-          <article class="extra-card">
-            <div class="icono-extra velocidad">
-              <i class="fa-solid fa-bolt"></i>
+          <div class="card extra-card">
+            <div class="card-body">
+              <div class="icono-extra velocidad">
+                <i class="fa-solid fa-bolt"></i>
+              </div>
+              <h4 class="card-title">Carga Ultrarrápida</h4>
+              <p class="card-text">Tu catálogo optimizado para velocidad máxima</p>
             </div>
-            <h4>Carga Ultrarrápida</h4>
-            <p>Tu catálogo optimizado para velocidad máxima</p>
-          </article>
+          </div>
 
-          <article class="extra-card">
-            <div class="icono-extra promociones">
-              <i class="fa-regular fa-star"></i>
+          <div class="card extra-card">
+            <div class="card-body">
+              <div class="icono-extra promociones">
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <h4 class="card-title">Promociones Inteligentes</h4>
+              <p class="card-text">Destacados y ofertas que convierten</p>
             </div>
-            <h4>Promociones Inteligentes</h4>
-            <p>Destacados y ofertas que convierten</p>
-          </article>
+          </div>
 
-          <article class="extra-card">
-            <div class="icono-extra usuarios">
-              <i class="fa-solid fa-users"></i>
+          <div class="card extra-card">
+            <div class="card-body">
+              <div class="icono-extra usuarios">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <h4 class="card-title">Cero Fricción</h4>
+              <p class="card-text">Tus clientes compran sin registrarse</p>
             </div>
-            <h4>Cero Fricción</h4>
-            <p>Tus clientes compran sin registrarse</p>
-          </article>
+          </div>
         </div>
       </section>
 
-      <!-- Sección final con llamada a la acción -->
+      <!-- Sección llamada a la acción -->
       <section id="llamada-accion">
         <h2>¿Listo para llevar tu emprendimiento al siguiente nivel?</h2>
-        <p>Únete a cientos de emprendedores que venden tecnología, belleza, accesorios y más con catálogos digitales profesionales</p>
+        <p>
+          Únete a cientos de emprendedores que venden tecnología, belleza,
+          accesorios y más con catálogos digitales profesionales
+        </p>
         <div class="cta-botones">
           <a href="pages/login.html" class="btn-principal">Empezar Gratis</a>
           <a href="pages/catalogo.html" class="btn-secundario">Ver Demo</a>
         </div>
       </section>
 
+      <!-- CAROUSEL BOOTSTRAP -->
+      <section class="carrusel-destacados">
+        <div id="carruselCategorias" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carruselCategorias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carruselCategorias" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carruselCategorias" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/carrusel/gemini-2.5-flash-image_haz_una_modificacion_el_celular_debe_estar_vertical-0 (1).jpg" class="d-block w-100" alt="Persona vendiendo desde su celular" />
+              <div class="carousel-caption">
+                <h5>Vende desde tu celular</h5>
+                <p>Administra tu catálogo y recibe pedidos sin salir de WhatsApp.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/carrusel/gemini-2.5-flash-image_en_en_la_manos_de_una_chica_se_vea_un_celular_y_en_la_pantalla_se_vea_esta_image-0.jpg" class="d-block w-100" alt="Persona compartiendo su catálogo" />
+              <div class="carousel-caption">
+                <h5>Comparte tu enlace en segundos</h5>
+                <p>Envía tu catálogo a tus clientes por redes sociales o WhatsApp.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="img/carrusel/pexels-cottonbro-3202032.jpg" class="d-block w-100" alt="Persona revisando pedidos" />
+              <div class="carousel-caption">
+                <h5>Gestiona tus pedidos fácil</h5>
+                <p>Controla tu inventario y tus ventas desde un solo lugar.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carruselCategorias" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carruselCategorias" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </section>
+
+      
     </main>
 
-    <!-- Pie de página -->
+    <!-- Footer -->
     <footer>
       <p>© 2024 Tu Catálogo Aquí. Todos los derechos reservados.</p>
       <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Instagram</a></p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>

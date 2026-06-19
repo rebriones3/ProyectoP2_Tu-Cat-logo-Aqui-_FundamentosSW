@@ -1,389 +1,437 @@
 /* ============================================================
    BLOQUE 1: RESET Y BOX MODEL GLOBAL
-   Se aplica a todos los elementos para un modelo de caja limpio.
    ============================================================ */
- 
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
- 
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9f9fb;
   color: #2d2d2d;
   line-height: 1.6;
 }
- 
 
 /* ============================================================
-   BLOQUE 2: HEADER GENERAL (Flexbox)
-   Barra superior compartida en todas las páginas del sitio.
+   BLOQUE 2: NAVBAR BOOTSTRAP 
    ============================================================ */
- 
-header {
+
+.navbar {
+  border-bottom: 2px solid #ececec;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 10px 32px;
+  background-color: #fff !important;
+}
+
+.navbar-brand {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 14px 32px;
-  background-color: #fff;
-  border-bottom: 2px solid #ececec;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  width: 100%;
+  gap: 12px;
+  text-decoration: none;
 }
- 
-header figure {
+
+.navbar-brand figure {
   margin: 0;
   flex-shrink: 0;
 }
- 
-header figure img {
+
+.navbar-brand figure img {
   display: block;
   border-radius: 8px;
   height: auto;
 }
- 
-/* ============================================================
-   BLOQUE 3: TEXTO DEL HEADER
-   Nombre del sitio y subtítulo junto al logo.
-   ============================================================ */
- 
-.header-text {
-  flex: 1;
-}
- 
-.header-text h4 {
+
+.navbar-brand-text h4 {
   font-size: 1rem;
   font-weight: 700;
   color: #06005caf;
-  margin-bottom: 2px;
+  margin-bottom: 0;
+  line-height: 1.2;
 }
- 
-.header-text p {
+
+.navbar-brand-text p {
   font-size: 0.78rem;
   color: #888;
+  margin: 0;
 }
- 
-/* ============================================================
-   BLOQUE 4: NAVEGACIÓN
-   Estilos para el menú de enlaces del header.
-   ============================================================ */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
- 
-.nav-links a {
-  display: inline-block;
+
+.navbar-nav .nav-link {
   padding: 8px 14px;
   border-radius: 20px;
-  text-decoration: none;
   font-size: 0.88rem;
   font-weight: 500;
-  color: #555;
+  color: #555 !important;
   transition: background 0.2s, color 0.2s;
   border: 1px solid transparent;
 }
- 
-.nav-links a:hover {
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active,
+.offcanvas .nav-link:hover {
   background-color: #0151bb;
-  color: #fff;
+  color: #fff !important;
+}
+
+/* Offcanvas menú móvil */
+.offcanvas-header {
+  border-bottom: 1px solid #eef1ff;
+}
+
+.offcanvas .nav-link {
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #333 !important;
+}
+
+/* Dropdown en nav */
+.navbar .dropdown-menu {
+  border: 1px solid #eef1ff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.navbar .dropdown-item {
+  font-size: 0.88rem;
+  padding: 8px 16px;
+  color: #555;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #eef1ff;
+  color: #0151bb;
 }
 
 /* ============================================================
-   BLOQUE 5: ESTRUCTURA SEMÁNTICA
-   Estilos base para main, section, article y aside.
+   BLOQUE 3: ESTRUCTURA SEMÁNTICA
    ============================================================ */
 
 main {
-    min-height: 70vh;
+  min-height: 70vh;
 }
 
 section {
-    background-color: white;
-    text-align: center;
+  background-color: white;
+  text-align: center;
 }
 
 section article {
-    background-color: #f7f9ff;
-    border: 1px solid #dcdcdc;
-    border-radius: 12px;
-    padding: 15px;
-}
-
-section aside {
-    background-color: #eef1ff;
-    padding: 20px;
-    border-radius: 8px;
+  background-color: #f7f9ff;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 15px;
 }
 
 article {
-    background-color: white;
-    border: 1px solid #dcdcdc;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 15px;
-    text-align: center;
+  background-color: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 article img {
-    border: 1px solid #dcdcdc;
-    border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
 }
 
 aside {
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 hr {
-    border: none;
-    border-top: 1px solid #dcdcdc;
-    margin: 15px 0;
+  border: none;
+  border-top: 1px solid #dcdcdc;
+  margin: 15px 0;
 }
 
 /* ============================================================
-   BLOQUE 6: IMÁGENES Y MULTIMEDIA
-   Estilos para imágenes, video, audio e iframe.
+   BLOQUE 4: IMÁGENES Y MULTIMEDIA
    ============================================================ */
 
 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
 figure {
-    display: inline-block;
-    margin: 10px;
-    text-align: center;
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
 }
 
 figcaption {
-    font-size: 0.85em;
-    color: #555577;
-    margin-top: 6px;
-    font-style: italic;
-    text-align: center;
+  font-size: 0.85em;
+  color: #555577;
+  margin-top: 6px;
+  font-style: italic;
+  text-align: center;
 }
 
 figure img {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 video {
-    max-width: 100%;
-    border-radius: 8px;
-    border: 2px solid darkblue;
+  max-width: 100%;
+  border-radius: 8px;
+  border: 2px solid darkblue;
 }
 
 audio {
-    width: 100%;
-    margin: 10px 0;
+  width: 100%;
+  margin: 10px 0;
 }
 
 iframe {
-    width: 100%;
-    border: 2px solid darkblue;
-    border-radius: 8px;
-    margin: 10px 0;
+  width: 100%;
+  border: 2px solid darkblue;
+  border-radius: 8px;
+  margin: 10px 0;
 }
 
 /* ============================================================
-   BLOQUE 7: LISTAS
-   Estilos para listas con viñetas y numeradas.
+   BLOQUE 5: LISTAS Y LIST GROUP
    ============================================================ */
 
 ul {
-    list-style: disc;
-    margin-bottom: 15px;
-    display: inline-block;
+  list-style: disc;
+  margin-bottom: 15px;
+  display: inline-block;
 }
 
 ol {
-    list-style: decimal;
-    padding-left: 20px;
-    margin-bottom: 15px;
+  list-style: decimal;
+  padding-left: 20px;
+  margin-bottom: 15px;
 }
 
 li {
-    margin-bottom: 6px;
-    line-height: 1.6;
-    text-align: center;
+  margin-bottom: 6px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* List Group personalizado con colores del sitio */
+.list-group-item {
+  border-color: #eef1ff;
+  font-size: 0.9rem;
+  color: #1a1a2e;
+}
+
+.list-group-item.active {
+  background-color: #2846b8;
+  border-color: #2846b8;
+}
+
+.list-group-item:hover:not(.active) {
+  background-color: #eef3ff;
+  color: #2846b8;
 }
 
 /* ============================================================
-   BLOQUE 8: FORMULARIOS
-   Estilos para campos, botones y elementos interactivos.
+   BLOQUE 6: FORMULARIOS
    ============================================================ */
 
 form {
-    width: 100%;
-    padding: 10px 0;
+  width: 100%;
+  padding: 10px 0;
 }
 
 label {
-    font-weight: bold;
-    color: darkblue;
-    font-size: 0.95em;
+  font-weight: bold;
+  color: darkblue;
+  font-size: 0.95em;
 }
 
-input {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #b0b8e0;
-    border-radius: 6px;
-    font-size: 0.95em;
-    background-color: #f7f9ff;
-}
-
-input:hover {
-    border-color: darkblue;
-    background-color: #eef1ff;
-}
-
-input:focus {
-    border-color: darkblue;
-    outline: 2px solid #4169e1;
-    background-color: #eef1ff;
+input,
+textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #b0b8e0;
+  border-radius: 6px;
+  font-size: 0.95em;
+  background-color: #f7f9ff;
 }
 
 textarea {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #b0b8e0;
-    border-radius: 6px;
-    font-size: 0.95em;
-    background-color: #f7f9ff;
-    resize: vertical;
+  resize: vertical;
 }
 
+input:hover,
 textarea:hover {
-    border-color: darkblue;
-    background-color: #eef1ff;
+  border-color: darkblue;
+  background-color: #eef1ff;
 }
 
-textarea:focus {
-    border-color: darkblue;
-    outline: 2px solid #4169e1;
-    background-color: #eef1ff;
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: darkblue;
+  outline: 2px solid #4169e1;
+  background-color: #eef1ff;
 }
 
 select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #b0b8e0;
-    border-radius: 6px;
-    font-size: 0.95em;
-    background-color: #f7f9ff;
-    cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #b0b8e0;
+  border-radius: 6px;
+  font-size: 0.95em;
+  background-color: #f7f9ff;
+  cursor: pointer;
 }
 
 select:hover {
-    border-color: darkblue;
-}
-
-select:focus {
-    border-color: darkblue;
-    outline: 2px solid #4169e1;
-    background-color: #eef1ff;
+  border-color: darkblue;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: darkblue;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 0.95em;
-    cursor: pointer;
-    font-weight: bold;
+  padding: 10px 20px;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95em;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 button:hover {
-    background-color: #4169e1;
-    color: white;
+  background-color: #4169e1;
+  color: white;
 }
 
 summary {
-    cursor: pointer;
-    font-weight: bold;
-    color: darkblue;
+  cursor: pointer;
+  font-weight: bold;
+  color: darkblue;
 }
 
 summary:hover {
-    color: #4169e1;
+  color: #4169e1;
 }
 
-progress,
-meter {
-    width: 100%;
-    height: 18px;
-    border-radius: 4px;
+/* Bootstrap progress personalizado */
+.progress {
+  border-radius: 6px;
+  background-color: #eef1ff;
+}
+
+.progress-bar {
+  background-color: #2846b8;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Bootstrap accordion personalizado */
+.accordion-button {
+  font-weight: 600;
+  color: #1a1a2e;
+  background-color: #f7f9ff;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #eef3ff;
+  color: #2846b8;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(40, 70, 184, 0.25);
+}
+
+.accordion-item {
+  border-color: #eef1ff;
+  margin-bottom: 4px;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+/* Bootstrap alert personalizado */
+.alert-primary {
+  background-color: #eef3ff;
+  border-color: #c7d7ff;
+  color: #2846b8;
+}
+
+.alert-success {
+  background-color: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #065f46;
+}
+
+.alert-link {
+  color: #1d37a0;
+  font-weight: 700;
+}
+
+/* Bootstrap spinner con color de marca */
+.spinner-border,
+.spinner-grow {
+  color: #2846b8;
 }
 
 /* ============================================================
-   BLOQUE 9: TABLAS
-   Estilos para encabezado, filas y celdas de tablas.
+   BLOQUE 7: TABLAS
    ============================================================ */
 
 table {
-    width: 80%;
-    margin: 20px auto;
-    background-color: white;
-    border-collapse: collapse;
-    text-align: center;
-    border: 2px solid #dcdcdc;
-    border-radius: 8px;
+  width: 80%;
+  margin: 20px auto;
+  background-color: white;
+  border-collapse: collapse;
+  text-align: center;
+  border: 2px solid #dcdcdc;
+  border-radius: 8px;
 }
 
 thead {
-    background-color: darkblue;
-    color: white;
+  background-color: darkblue;
+  color: white;
 }
 
 tbody {
-    background-color: white;
+  background-color: white;
 }
 
 tbody tr {
-    border-bottom: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
 }
 
 tbody tr:hover {
-    background-color: #eef1ff;
+  background-color: #eef1ff;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f0f4ff;
+  background-color: #f0f4ff;
 }
 
 th {
-    padding: 15px;
-    border: 1px solid #dcdcdc;
-    text-align: center;
-    font-size: 0.95em;
+  padding: 15px;
+  border: 1px solid #dcdcdc;
+  text-align: center;
+  font-size: 0.95em;
 }
 
 td {
-    padding: 15px;
-    border: 1px solid #dcdcdc;
-    text-align: center;
-    color: #1a1a2e;
-    font-size: 0.9em;
+  padding: 15px;
+  border: 1px solid #dcdcdc;
+  text-align: center;
+  color: #1a1a2e;
+  font-size: 0.9em;
 }
 
 /* ============================================================
-   BLOQUE 10: PIE DE PÁGINA (FOOTER)
-   Barra inferior con texto de derechos y enlaces de redes.
+   BLOQUE 8: PIE DE PÁGINA
    ============================================================ */
 
 footer {
@@ -397,45 +445,22 @@ footer {
   flex-direction: column;
   gap: 6px;
 }
- 
+
 footer a {
   color: #4362ff;
   text-decoration: none;
 }
- 
+
 footer a:hover {
   color: #fff;
 }
- 
 
 /* ============================================================
    RESPONSIVE GENERAL
-   Adaptaciones del header y nav para pantallas pequeñas.
    ============================================================ */
 
 @media (max-width: 768px) {
-
-    /* El header apila logo+texto arriba y nav abajo */
-    header {
-        flex-wrap: wrap;
-        padding: 12px 16px;
-        gap: 10px;
-    }
-
-    .header-text {
-        flex: 1;
-        min-width: 0;
-    }
-
-    /* La nav ocupa toda la fila en móvil */
-    .nav-links {
-        width: 100%;
-        justify-content: center;
-        gap: 4px;
-    }
-
-    .nav-links a {
-        font-size: 0.8rem;
-        padding: 6px 10px;
-    }
+  .navbar {
+    padding: 10px 16px;
+  }
 }

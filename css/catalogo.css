@@ -1,289 +1,512 @@
 /* ============================================================
    BLOQUE 1: HERO DEL CATÁLOGO
-   Sección de presentación superior con título y botones.
    ============================================================ */
 
 #hero-catalogo {
-    background: linear-gradient(135deg, #3153c8 0%, #3c82f6 55%, #1ba5e8 100%);
-    padding: 70px 20px 60px;
-    text-align: center;
-    color: white;
+  background: linear-gradient(135deg, #3153c8 0%, #3c82f6 55%, #1ba5e8 100%);
+  padding: 70px 20px 60px;
+  text-align: center;
+  color: white;
 }
 
 #hero-catalogo h1 {
-    color: white;
-    font-size: 48px;
-    margin-bottom: 16px;
+  color: white;
+  font-size: 48px;
+  margin-bottom: 16px;
 }
 
 #hero-catalogo p {
-    color: white;
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto 30px;
+  color: white;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto 30px;
 }
 
 #hero-catalogo button {
-    margin: 0 8px;
-    padding: 14px 32px;
-    border-radius: 12px;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    border: none;
+  margin: 0 8px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
 }
 
 #hero-catalogo button:first-of-type {
-    background: white;
-    color: #1d4ed8;
+  background: white;
+  color: #1d4ed8;
 }
 
 #hero-catalogo button:last-of-type {
-    background: rgba(255, 255, 255, 0.15);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
 #hero-catalogo button:hover {
-    opacity: 0.88;
+  opacity: 0.88;
+}
+
+/* Spinners Bootstrap en el hero */
+.spinners-catalogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+  opacity: 0.85;
+}
+
+.spinners-catalogo .spinner-border,
+.spinners-catalogo .spinner-grow {
+  color: white;
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 /* ============================================================
    BLOQUE 2: INFORMACIÓN DE LA TIENDA
-   Dos columnas: datos del negocio y estadísticas destacadas.
    ============================================================ */
 
 #info-tienda {
-    display: flex;
-    gap: 30px;
-    align-items: stretch;
-    padding: 60px 10%;
-    background: #f7f9fc;
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+  padding: 60px 10%;
+  background: #f7f9fc;
 }
 
 .caja-tienda {
-    flex: 1;
-    background: white;
-    border-radius: 24px;
-    padding: 36px 32px;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  flex: 1;
+  background: white;
+  border-radius: 24px;
+  padding: 36px 32px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
 }
 
 .caja-tienda img {
-    border-radius: 50%;
-    border: 3px solid #eef3ff;
+  border-radius: 50%;
+  border: 3px solid #eef3ff;
 }
 
 .caja-tienda h3 {
-    font-size: 22px;
-    color: #1a1a2e;
-    margin-bottom: 8px;
+  font-size: 22px;
+  color: #1a1a2e;
+  margin-bottom: 8px;
 }
 
 .caja-tienda p {
-    color: #60708d;
-    font-size: 14px;
-    margin-bottom: 6px;
+  color: #60708d;
+  font-size: 14px;
+  margin-bottom: 6px;
 }
 
 .caja-tienda button {
-    margin-top: 16px;
-    padding: 12px 24px;
-    background: #25d366;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: #25d366;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .caja-tienda button:hover {
-    background: #1ebe5d;
+  background: #1ebe5d;
 }
 
 .caja-info {
-    flex: 1.4;
-    background: #2846b8;
-    border-radius: 24px;
-    padding: 36px 32px;
-    color: white;
-    text-align: left;
+  flex: 1.4;
+  background: #2846b8;
+  border-radius: 24px;
+  padding: 36px 32px;
+  color: white;
+  text-align: left;
 }
 
 .caja-info h2 {
-    color: white;
-    font-size: 26px;
-    margin-bottom: 12px;
+  color: white;
+  font-size: 26px;
+  margin-bottom: 12px;
 }
 
 .caja-info > p {
-    color: rgba(255, 255, 255, 0.85);
-    text-align: left;
-    margin-bottom: 28px;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: left;
+  margin-bottom: 28px;
 }
 
 .estadisticas-tienda {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 
 .stat {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.12);
-    border-radius: 16px;
-    padding: 20px 16px;
-    text-align: center;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 20px 16px;
+  text-align: center;
 }
 
 .stat h3 {
-    color: white;
-    font-size: 26px;
-    margin-bottom: 4px;
+  color: white;
+  font-size: 26px;
+  margin-bottom: 4px;
 }
 
 .stat p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 12px;
-    margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  margin: 0;
 }
 
 /* ============================================================
-   BLOQUE 3: BUSCADOR Y ENCABEZADO DE COLECCIÓN
-   Título, descripción e input de búsqueda de productos.
+   BLOQUE 3: NAVBAR DE BÚSQUEDA (Bootstrap navbar search)
    ============================================================ */
 
-#seccion-busqueda {
-    background: white;
-    padding: 50px 10%;
-    text-align: center;
-    border-bottom: 1px solid #eef1ff;
+.navbar-busqueda {
+  background: white;
+  padding: 50px 10%;
+  text-align: center;
+  border-bottom: 1px solid #eef1ff;
 }
 
-#seccion-busqueda h2 {
-    font-size: 32px;
-    color: #1a1a2e;
-    margin-bottom: 10px;
+.busqueda-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#seccion-busqueda p {
-    color: #60708d;
-    margin-bottom: 24px;
+.busqueda-inner h2 {
+  font-size: 32px;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.busqueda-inner p {
+  color: #60708d;
+  margin-bottom: 24px;
+}
+
+.busqueda-form {
+  width: 100%;
+  max-width: 480px;
 }
 
 #buscar-productos {
-    width: 100%;
-    max-width: 480px;
-    padding: 13px 20px;
-    border: 2px solid #dde4ff;
-    border-radius: 12px;
-    font-size: 15px;
-    background: #f7f9ff;
-    outline: none;
-    transition: border-color 0.2s;
+  border: 2px solid #dde4ff;
+  border-radius: 12px;
+  font-size: 15px;
+  background: #f7f9ff;
+  padding: 12px 16px;
 }
 
 #buscar-productos:focus {
-    border-color: #3c82f6;
-    background: white;
+  border-color: #3c82f6;
+  background: white;
+  box-shadow: none;
+}
+
+.btn-buscar {
+  padding: 12px 22px;
+  background: #2846b8;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn-buscar:hover {
+  background: #3c82f6;
+  color: white;
 }
 
 /* ============================================================
-   BLOQUE 4: CUADRÍCULA DE PRODUCTOS
-   Tarjetas con imagen, nombre, precio y botón de compra.
+   BLOQUE 4: GRID DE PRODUCTOS (Bootstrap .card)
    ============================================================ */
 
 #grid-productos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    padding: 50px 10%;
-    background-color: #3153c8;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 50px 10%;
+  background-color: #f8f8f9;
 }
 
-#grid-productos article {
-    background: white;
-    border-radius: 20px;
-    padding: 24px 20px;
-    text-align: center;
-    border: 1px solid #eef1ff;
-    margin-bottom: 0;
+.card-producto {
+  border-radius: 20px !important;
+  border: 1px solid #eef1ff !important;
+  text-align: center;
+  overflow: hidden;
 }
 
-#grid-productos article img {
-    border-radius: 12px;
-    margin-bottom: 14px;
+.card-producto .card-img-top {
+  border-radius: 0;
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin: 20px auto 0;
+  display: block;
 }
 
-#grid-productos article h3 {
-    font-size: 15px;
-    color: #1a1a2e;
-    margin-bottom: 6px;
+.card-producto .card-title {
+  font-size: 15px;
+  color: #1a1a2e;
+  margin-bottom: 6px;
 }
 
-#grid-productos article p {
-    color: #3153c8;
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 14px;
+.card-producto .precio {
+  color: #3153c8;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
 }
 
-#grid-productos article button {
-    width: 100%;
-    padding: 10px;
-    background: #2846b8;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
+.btn-comprar {
+  width: 100%;
+  padding: 10px;
+  background: #2846b8;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-#grid-productos article button:hover {
-    background: #3c82f6;
+.btn-comprar:hover {
+  background: #3c82f6;
+  color: white;
 }
 
 /* ============================================================
-   BLOQUE 5: RESPONSIVE
-   Adaptaciones para pantallas pequeñas (tablets y móviles).
+   BLOQUE 5: MODAL BOOTSTRAP (detalle de producto)
+   ============================================================ */
+
+.modal-producto-content {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.modal-producto-header {
+  background: linear-gradient(135deg, #2846b8, #3c82f6);
+  color: white;
+  border-bottom: none;
+  padding: 18px 24px;
+}
+
+.modal-producto-header .modal-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+}
+
+.modal-producto-body {
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.modal-producto-body img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 14px;
+  border: 1px solid #eef1ff;
+  margin-bottom: 18px;
+}
+
+.modal-producto-body h4 {
+  font-size: 18px;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.modal-producto-body p {
+  font-size: 14px;
+  color: #60708d;
+  margin-bottom: 16px;
+}
+
+.modal-meta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.modal-precio {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2846b8;
+}
+
+.modal-stock {
+  font-size: 13px;
+  color: #60708d;
+  background: #f0f4ff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  align-self: center;
+}
+
+.modal-producto-footer {
+  border-top: 1px solid #eef1ff;
+  padding: 16px 24px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.btn-modal-cerrar {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1.5px solid #dde4ff;
+  background: white;
+  color: #60708d;
+  cursor: pointer;
+}
+
+.btn-modal-cerrar:hover {
+  background: #f0f4ff;
+  color: #1a1a2e;
+}
+
+.btn-modal-whatsapp {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+}
+
+.btn-modal-whatsapp:hover {
+  background: #1ebe5d;
+  color: white;
+}
+
+/* ============================================================
+   BLOQUE 6: CARRUSEL DE PROMOCIONES
+   ============================================================ */
+
+.seccion-promociones {
+  background: #f7f9fc;
+  padding: 40px 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.seccion-promociones .carousel {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.seccion-promociones .carousel-item img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  filter: brightness(0.55);
+}
+
+.seccion-promociones .carousel-caption h5 {
+  color: white;
+  margin-bottom: 6px;
+}
+
+.seccion-promociones .carousel-caption strong {
+  color: #7dd3fc;
+}
+
+/* ============================================================
+   BLOQUE 7: PLACEHOLDER DE CARGA (Bootstrap)
+   ============================================================ */
+
+.seccion-placeholder {
+  background: #f7f9fc;
+  padding: 20px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.placeholder-label {
+  color: #60708d;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.card-placeholder {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 16px !important;
+  border: 1px solid #eef1ff !important;
+}
+
+/* ============================================================
+   BLOQUE 8: RESPONSIVE
    ============================================================ */
 
 @media (max-width: 1024px) {
-    #grid-productos {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  #grid-productos { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 768px) {
+  #hero-catalogo h1 { font-size: 32px; }
 
-    #hero-catalogo h1 {
-        font-size: 32px;
-    }
+  #info-tienda {
+    flex-direction: column;
+    padding: 40px 6%;
+  }
 
-    #info-tienda {
-        flex-direction: column;
-        padding: 40px 6%;
-    }
+  .estadisticas-tienda { flex-direction: column; }
 
-    .estadisticas-tienda {
-        flex-direction: column;
-    }
+  .navbar-busqueda { padding: 36px 6%; }
 
-    #seccion-busqueda {
-        padding: 36px 6%;
-    }
+  #grid-productos {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 36px 6%;
+    gap: 16px;
+  }
 
-    #grid-productos {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 36px 6%;
-        gap: 16px;
-    }
+  .seccion-promociones .carousel-item img {
+    height: 220px;
+  }
 }
 
 @media (max-width: 480px) {
-    #grid-productos {
-        grid-template-columns: 1fr;
-    }
+  #grid-productos { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   BLOQUE 9: AJUSTE TABLET (768px–991px)
+   Recupera el layout en fila para la info de la tienda, ya que
+   en este rango hay suficiente ancho disponible.
+   ============================================================ */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #info-tienda {
+    flex-direction: row;
+  }
+
+  .estadisticas-tienda {
+    flex-direction: row;
+  }
 }
