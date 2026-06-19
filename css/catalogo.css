@@ -357,6 +357,25 @@
   align-self: center;
 }
 
+/* Opciones del producto (talla, color, capacidad, etc. según la categoría) */
+.opciones-grupo {
+  margin-top: 16px;
+}
+
+.btn-opcion {
+  border: 1.5px solid #dde4ff;
+  color: #60708d;
+  background: white;
+  font-size: 12px;
+  padding: 5px 12px;
+}
+
+.btn-opcion:hover {
+  background: #f0f4ff;
+  color: #2846b8;
+  border-color: #2846b8;
+}
+
 .modal-producto-footer {
   border-top: 1px solid #eef1ff;
   padding: 16px 24px;
